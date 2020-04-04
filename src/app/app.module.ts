@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { MatSliderModule } from '@angular/material/slider';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,6 +28,7 @@ import { environment } from '../environments/environment';
     
     MatButtonModule,
     MatSliderModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

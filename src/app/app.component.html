@@ -22,14 +22,14 @@
                     [style.font-size]="data.fontSize ? (data.fontSize*100)+'%' : undefined"
                     [name]="data.key"
                     [(ngModel)]="data.value" />
-            </ng-template>        
+            </ng-template>
         </div></div>
 </div>
 <!-- [style.background-image]="pages[0]" -->
 <!--  -->
 <div class="config-panel">
     <button mat-button (click)="save()" class="save-button">
-        Save <i class="icon">save</i>
+        Save <mat-icon aria-hidden="true">save</mat-icon>
     </button>
     <!--
         <label for="page-size">
