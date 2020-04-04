@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import { TwoSheetData } from 'src/app/model/sheet.model';
+import { TwoPageSheetConfig } from 'src/app/model/sheet-config.model';
 
 import { SaveService } from 'src/app/sheet/shared/save/save.service';
 import cthulhuV7frClassique from './config.json';
 
+const GAME = 'cthulhu-v7-fr-classique';// ! TODO remove this when data values will be separated from config
 
 @Component({
   selector: 'app-cthulhu-v7-fr-classique',
@@ -12,18 +13,16 @@ import cthulhuV7frClassique from './config.json';
 })
 export class CthulhuV7FrClassiqueComponent {
 
-  sheetData: TwoSheetData = cthulhuV7frClassique as TwoSheetData;
-  game = 'cthulhu-v7-fr-classique';
-
+  sheetConfig: TwoPageSheetConfig = cthulhuV7frClassique as TwoPageSheetConfig;
+  
   constructor(private saveService: SaveService) {
-    const saved = saveService.restore(this.game);
+    const saved = saveService.restore(GAME);
     if(saved !== undefined && saved.content.pageCount === 2) {
-      this.sheetData = saved as TwoSheetData;
+      this.sheetConfig = saved as TwoPageSheetConfig;
     }
   }
 
   save() {
-    this.saveService.save(this.game, this.sheetData);
+    this.saveService.save(GAME, this.sheetConfig);
   }
-
 }

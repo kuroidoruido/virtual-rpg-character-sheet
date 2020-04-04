@@ -1,5 +1,4 @@
-<app-two-pages [game]="game" [sheetData]="sheetData"></app-two-pages>
-
+<app-two-pages [game]="game" [sheetConfig]="sheetConfig"></app-two-pages>
 
 <div class="config-panel">
     <button mat-button (click)="save()" class="save-button">
@@ -7,8 +6,8 @@
     </button>
     <!--
         <label for="page-size">
-            Page width ({{ sheetData.pageConfig.pageWidth}}%): 
-            <mat-slider id="page-size" name="page-size" min="10" max="100" step="1" [(value)]="sheetData.pageConfig.pageWidth" thumbLabel></mat-slider>
+            Page width ({{ sheetConfig.pageConfig.pageWidth}}%): 
+            <mat-slider id="page-size" name="page-size" min="10" max="100" step="1" [(value)]="sheetConfig.pageConfig.pageWidth" thumbLabel></mat-slider>
         </label>
     -->
 </div>

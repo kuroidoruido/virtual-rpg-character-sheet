@@ -1,8 +1,8 @@
-<ng-template [ngIf]="sheetData">
-    <div class="pages" #pages [class.ratio-A4]="sheetData.pageConfig.pageFormat === 'A4'">
+<ng-template [ngIf]="sheetConfig">
+    <div class="pages" #pages [class.ratio-A4]="sheetConfig.pageConfig.pageFormat === 'A4'">
         <div class="page" id="page-1">
             <div class="page-input-container">
-                <ng-template ngFor let-data [ngForOf]="sheetData.content.page1" >
+                <ng-template ngFor let-data [ngForOf]="sheetConfig.content.page1" >
                     <input type="text"
                         [style.left]="data.x+'%'" 
                         [style.top]="data.y+'%'" 
@@ -15,7 +15,7 @@
         </div>
         <div class="page" id="page-2">
             <div class="page-input-container">
-                <ng-template ngFor let-data [ngForOf]="sheetData.content.page2" >
+                <ng-template ngFor let-data [ngForOf]="sheetConfig.content.page2" >
                     <input type="text"
                         [style.left]="data.x+'%'" 
                         [style.top]="data.y+'%'" 

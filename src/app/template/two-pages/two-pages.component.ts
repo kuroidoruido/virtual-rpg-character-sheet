@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TwoSheetData } from 'src/app/model/sheet.model';
+import { TwoPageSheetConfig } from 'src/app/model/sheet-config.model';
 
 @Component({
   selector: 'app-two-pages',
@@ -9,7 +9,7 @@ import { TwoSheetData } from 'src/app/model/sheet.model';
 export class TwoPagesComponent implements OnInit {
 
   @Input() game!: string;
-  @Input() sheetData!: TwoSheetData;
+  @Input() sheetConfig!: TwoPageSheetConfig;
 
   constructor() { }
 
@@ -17,7 +17,7 @@ export class TwoPagesComponent implements OnInit {
     if(this.game === undefined) {
       console.error('You should provide a the game attribute on TwoPagesComponent');
     }
-    if(this.sheetData === undefined) {
+    if(this.sheetConfig === undefined) {
       console.error('You should provide a the sheetData attribute on TwoPagesComponent');
     }
   }
