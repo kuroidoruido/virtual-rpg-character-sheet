@@ -5,6 +5,7 @@
       "pageWidth": 100
     },
     "content": {
+      "pageCount": 2,
       "page1": [
         { "key": "etatCivil.nom", "value": "Adem Öcalan", "x": 9.7, "y": 5.9, "width": 26.5 },
         { "key": "etatCivil.joueur", "value": "", "x": 10.5, "y": 8, "width": 25.7 },

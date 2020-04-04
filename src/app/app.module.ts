@@ -11,12 +11,16 @@ import { MatSliderModule } from '@angular/material/slider';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
+import { CthulhuV7FrClassiqueComponent } from './sheet/cthulhu-v7-fr-classique/cthulhu-v7-fr-classique.component';
+import { TwoPagesComponent } from './template/two-pages/two-pages.component';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CthulhuV7FrClassiqueComponent,
+    TwoPagesComponent
   ],
   imports: [
     AppRoutingModule,
