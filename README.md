@@ -8,6 +8,8 @@ This tool aims to work without any back ou server, just the web client host some
 
 Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! You are welcome for tests and give feedback!
 
+[See deployed version on Github Pages](https://kuroidoruido.github.io/virtual-rpg-character-sheet/)
+
 ![Simple preview of Call of Cthulhu v7 fr classical sheet](screenshot.png)
 
 # State of the project
