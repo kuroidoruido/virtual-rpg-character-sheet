@@ -1,31 +1,9 @@
 import { Component, AfterViewChecked, ViewChild } from '@angular/core';
 
 import cthulhuV7frClassique from '../assets/cthulhu-v7-fr-classique/config.json';
+import { TwoSheetData } from './model/sheet.model';
+import { SaveService } from './shared/save/save.service.js';
 
-type Percent = number;
-
-interface SheetDataPosition {
-  key: string;
-  x: number;
-  y: number;
-  width: Percent;
-  value: string | number;
-  fontSize?: Percent;
-}
-
-interface SheetData {
-  content: {
-    page1: SheetDataPosition[],
-    page2: SheetDataPosition[],
-  };
-  pageConfig: {
-    pageFormat: 'A4';// ! TODO fix ratio bug (ratio is not respected if this value is under 100)
-    pageWidth: Percent;
-    pages: string[];
-  };
-}
-
-const LOCAL_STORAGE_SHEET_DATA_KEY = "VirtualRgpCharacterSheet.SheetData.";
 
 @Component({
   selector: 'app-root',
@@ -35,13 +13,13 @@ const LOCAL_STORAGE_SHEET_DATA_KEY = "VirtualRgpCharacterSheet.SheetData.";
 export class AppComponent implements AfterViewChecked {
   @ViewChild('pages', { static: true }) pagesWrapperElement: any;
 
-  sheetData: SheetData = cthulhuV7frClassique as SheetData;
+  sheetData: TwoSheetData = cthulhuV7frClassique as TwoSheetData;
   game = 'cthulhu-v7-fr-classique';
 
-  constructor() {
-    const saved = localStorage.getItem(`${LOCAL_STORAGE_SHEET_DATA_KEY}${this.game}`);
-    if(saved !== undefined && saved !== null) {
-      this.sheetData = JSON.parse(saved);
+  constructor(private saveService: SaveService) {
+    const saved = saveService.restore(this.game);
+    if(saved !== undefined && saved.content.pageCount === 2) {
+      this.sheetData = saved as TwoSheetData;
     }
   }
 
@@ -52,6 +30,6 @@ export class AppComponent implements AfterViewChecked {
   }
 
   save() {
-    localStorage.setItem(`${LOCAL_STORAGE_SHEET_DATA_KEY}${this.game}`, JSON.stringify(this.sheetData));
+    this.saveService.save(this.game, this.sheetData);
   }
 }
