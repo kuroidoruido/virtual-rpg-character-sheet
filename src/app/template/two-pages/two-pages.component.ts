@@ -8,18 +8,11 @@ import { TwoPageSheetConfig } from 'src/app/model/sheet-config.model';
 })
 export class TwoPagesComponent implements OnInit {
 
-  @Input() game!: string;
   @Input() sheetConfig!: TwoPageSheetConfig;
 
-  constructor() { }
-
   ngOnInit(): void {
-    if(this.game === undefined) {
-      console.error('You should provide a the game attribute on TwoPagesComponent');
-    }
     if(this.sheetConfig === undefined) {
       console.error('You should provide a the sheetData attribute on TwoPagesComponent');
     }
   }
-
 }

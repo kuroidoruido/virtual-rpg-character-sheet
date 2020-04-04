@@ -1,23 +1,16 @@
-export type Percent = number;
+import { PlaceholderConfig } from './placeholder.model';
 
-export interface PlaceholderPosition {
-  key: string;
-  x: number;
-  y: number;
-  width: Percent;
-  value: string | number;
-  fontSize?: Percent;
-}
+type Percent = number;
 
 export interface OnePageContent {
     pageCount: 1;
-    page1: PlaceholderPosition[];
+    page1: PlaceholderConfig[];
 }
 
 export interface TwoPageContent {
     pageCount: 2;
-    page1: PlaceholderPosition[];
-    page2: PlaceholderPosition[];
+    page1: PlaceholderConfig[];
+    page2: PlaceholderConfig[];
 }
 
 export type SheetContent = OnePageContent | TwoPageContent;
