@@ -1,0 +1,60 @@
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    .pages {
+        --pageWidth: 40%;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: fit-content;
+        justify-content: center;
+        .page {
+            position: relative;
+            display: block;
+            width: var(--pageWidth);
+            border: black solid 1px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+
+            .page-input-container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                input {
+                    display: block;
+                    position: absolute;
+                    background: rgba(255,255,255,0.6) repeat;
+                    border: dotted thin blue;
+                }
+            }
+
+        }
+        
+        &.ratio-A4 .page {
+            padding-top: 70.71%;
+        }
+    
+    }
+
+    // ! TODO replace by dyname images
+    #page-1 {
+        background-image: url("src/assets/cthulhu-v7-fr-classique/page-1.png");
+    }
+
+    #page-2 {
+        background-image: url("src/assets/cthulhu-v7-fr-classique/page-2.png");
+    }
+
+    .save-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: white;
+    }
+
+}
