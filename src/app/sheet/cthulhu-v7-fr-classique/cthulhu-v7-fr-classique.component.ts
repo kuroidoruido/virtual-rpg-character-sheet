@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TwoSheetData } from 'src/app/model/sheet.model';
 
-import { SaveService } from 'src/app/shared/save/save.service.js';
+import { SaveService } from 'src/app/sheet/shared/save/save.service';
 import cthulhuV7frClassique from './config.json';
 
 
