@@ -1,5 +1,7 @@
 # VirtualRpgCharacterSheet
 
+![Deploy to GitHub Pages](https://github.com/kuroidoruido/virtual-rpg-character-sheet/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)
+
 Simple RPG character sheet manager for players and GMs.
 
 This tool aims to work without any back ou server, just the web client host somewhere.
