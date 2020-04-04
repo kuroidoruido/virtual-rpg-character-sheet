@@ -1,0 +1,90 @@
+{
+  "configVersion": 1,
+  "timestamp": 1586012947387,
+  "index": "/virtual-rpg-character-sheet/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/virtual-rpg-character-sheet/favicon.ico",
+        "/virtual-rpg-character-sheet/index.html",
+        "/virtual-rpg-character-sheet/main-es2015.f40b81287e340d6ca268.js",
+        "/virtual-rpg-character-sheet/main-es5.f40b81287e340d6ca268.js",
+        "/virtual-rpg-character-sheet/manifest.webmanifest",
+        "/virtual-rpg-character-sheet/polyfills-es2015.bbb42ff2e1c488ff52d5.js",
+        "/virtual-rpg-character-sheet/polyfills-es5.0e4e1968447fab48e788.js",
+        "/virtual-rpg-character-sheet/runtime-es2015.c9afb3256f2870e161de.js",
+        "/virtual-rpg-character-sheet/runtime-es5.c9afb3256f2870e161de.js",
+        "/virtual-rpg-character-sheet/styles.ca45be92eaa9dc5a2a44.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/virtual-rpg-character-sheet/assets/cthulhu-v7-fr-classique/config.json",
+        "/virtual-rpg-character-sheet/assets/cthulhu-v7-fr-classique/page-1.png",
+        "/virtual-rpg-character-sheet/assets/cthulhu-v7-fr-classique/page-2.png",
+        "/virtual-rpg-character-sheet/assets/icons/icon-128x128.png",
+        "/virtual-rpg-character-sheet/assets/icons/icon-144x144.png",
+        "/virtual-rpg-character-sheet/assets/icons/icon-152x152.png",
+        "/virtual-rpg-character-sheet/assets/icons/icon-192x192.png",
+        "/virtual-rpg-character-sheet/assets/icons/icon-384x384.png",
+        "/virtual-rpg-character-sheet/assets/icons/icon-512x512.png",
+        "/virtual-rpg-character-sheet/assets/icons/icon-72x72.png",
+        "/virtual-rpg-character-sheet/assets/icons/icon-96x96.png",
+        "/virtual-rpg-character-sheet/page-1.94ba37d378676c1781e1.png",
+        "/virtual-rpg-character-sheet/page-2.ba1e337693a63293d939.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/virtual-rpg-character-sheet/assets/cthulhu-v7-fr-classique/config.json": "67c9ec51b6a6b5c8632ff2edf418da370315f8be",
+    "/virtual-rpg-character-sheet/assets/cthulhu-v7-fr-classique/page-1.png": "3ec60f25dc15203bdded71ed863edcf8c6739bd0",
+    "/virtual-rpg-character-sheet/assets/cthulhu-v7-fr-classique/page-2.png": "9805d088884459b4c58c00127818828093884d69",
+    "/virtual-rpg-character-sheet/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/virtual-rpg-character-sheet/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/virtual-rpg-character-sheet/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/virtual-rpg-character-sheet/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/virtual-rpg-character-sheet/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/virtual-rpg-character-sheet/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/virtual-rpg-character-sheet/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/virtual-rpg-character-sheet/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/virtual-rpg-character-sheet/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/virtual-rpg-character-sheet/index.html": "fd5277001cb23ffa53cfe8bba784969a3481cbac",
+    "/virtual-rpg-character-sheet/main-es2015.f40b81287e340d6ca268.js": "51e50cc7231c7a3eafba90d25a069bb6d2df3927",
+    "/virtual-rpg-character-sheet/main-es5.f40b81287e340d6ca268.js": "45ca17320057c687c62cfb132290cd4ef9341473",
+    "/virtual-rpg-character-sheet/manifest.webmanifest": "f166e2778ce292202ecbc77146ab8c0714eb46be",
+    "/virtual-rpg-character-sheet/page-1.94ba37d378676c1781e1.png": "3ec60f25dc15203bdded71ed863edcf8c6739bd0",
+    "/virtual-rpg-character-sheet/page-2.ba1e337693a63293d939.png": "9805d088884459b4c58c00127818828093884d69",
+    "/virtual-rpg-character-sheet/polyfills-es2015.bbb42ff2e1c488ff52d5.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
+    "/virtual-rpg-character-sheet/polyfills-es5.0e4e1968447fab48e788.js": "e51a1de4f016cd689dbdbef51043dec9518c4111",
+    "/virtual-rpg-character-sheet/runtime-es2015.c9afb3256f2870e161de.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/virtual-rpg-character-sheet/runtime-es5.c9afb3256f2870e161de.js": "a9aafcf49f49145093fc831efd9b8e2f6c71bb9c",
+    "/virtual-rpg-character-sheet/styles.ca45be92eaa9dc5a2a44.css": "a659d5f6b8f4cad8b9a584f4b446324ec72d80c4"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
