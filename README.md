@@ -1,27 +1,35 @@
 # VirtualRpgCharacterSheet
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+Simple RPG character sheet manager for players and GMs.
 
-## Development server
+This tool aims to work without any back ou server, just the web client host somewhere.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! You are welcome for tests and give feedback!
 
-## Code scaffolding
+![Simple preview of Call of Cthulhu v7 fr classical sheet](screenshot.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# State of the project
 
-## Build
+## What's working?
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- can play to Call of Cthulhu v7 with french classical sheet
+- can save (local storage = in your browser) your sheet state
 
-## Running unit tests
+## What's next?
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- split sheet configuration from user data
+- share link: will offer a way to make someone else our sheet (without server)
+- print mode (convert editable field as static field, make multiple page on column, make it fit in A4 pages)
+- have more than text input as sheet placeholder: 
+    - text (static, readonly)
+    - computed (for value that depends than another one)
+    - checkbox/checkbox bar (for example for Call of Cthulhu v7 we can use this for life point)
+    - textarea (for multiline text input)
+- game/sheet selector
+- more game sheet
+- character selector
+- can keep more than one character for one particular game for one user
+- free note zone (for taking notes during a session)
+- a simple dice roller
+- a sheet builder assistant (because it's really boring to make it through json...)
+- ability to set sheet width with kept ratio
