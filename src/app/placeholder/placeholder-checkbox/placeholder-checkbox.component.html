@@ -1,0 +1,9 @@
+<mat-checkbox
+    [style.left]="config.x+'%'" 
+    [style.top]="config.y+'%'" 
+    [style.width]="config.width+'%'"
+    [style.font-size]="config.fontSize ? (config.fontSize*100)+'%' : undefined"
+    [name]="config.key"
+    [(ngModel)]="config.value"
+    color="primary">
+</mat-checkbox>

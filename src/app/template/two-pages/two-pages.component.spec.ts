@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TwoPagesComponent } from './two-pages.component';
+import { PlaceholderModule } from 'src/app/placeholder/placeholder.module';
 
 describe('TwoPagesComponent', () => {
   let component: TwoPagesComponent;
@@ -8,7 +9,8 @@ describe('TwoPagesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TwoPagesComponent ]
+      declarations: [ TwoPagesComponent ],
+      imports: [ PlaceholderModule ]
     })
     .compileComponents();
   }));

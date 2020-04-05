@@ -3,26 +3,14 @@
         <div class="page" id="page-1">
             <div class="page-input-container">
                 <ng-template ngFor let-data [ngForOf]="sheetConfig.content.page1" >
-                    <input type="text"
-                        [style.left]="data.x+'%'" 
-                        [style.top]="data.y+'%'" 
-                        [style.width]="data.width+'%'"
-                        [style.font-size]="data.fontSize ? (data.fontSize*100)+'%' : undefined"
-                        [name]="data.key"
-                        [(ngModel)]="data.value" />
+                    <app-placeholder [config]="data"></app-placeholder>
                 </ng-template>        
             </div>
         </div>
         <div class="page" id="page-2">
             <div class="page-input-container">
                 <ng-template ngFor let-data [ngForOf]="sheetConfig.content.page2" >
-                    <input type="text"
-                        [style.left]="data.x+'%'" 
-                        [style.top]="data.y+'%'" 
-                        [style.width]="data.width+'%'"
-                        [style.font-size]="data.fontSize ? (data.fontSize*100)+'%' : undefined"
-                        [name]="data.key"
-                        [(ngModel)]="data.value" />
+                    <app-placeholder [config]="data"></app-placeholder>
                 </ng-template>
             </div>
         </div>

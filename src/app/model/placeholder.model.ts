@@ -22,6 +22,7 @@ export interface TextInputPlaceholderConfig extends BasePlaceholderConfig {
 }
 
 export interface TextZonePlaceholderConfig extends BasePlaceholderConfig {
+    value: string;
     type: 'text-zone';
     height: Percent;
 }

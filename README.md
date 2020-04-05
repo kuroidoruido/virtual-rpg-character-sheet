@@ -18,18 +18,18 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 
 - can play to Call of Cthulhu v7 with french classical sheet
 - can save (local storage = in your browser) your sheet state
+- have different placeholders: 
+    - text (static, readonly)
+    - checkbox/checkbox bar (for example for Call of Cthulhu v7 we can use this for life point)
+    - textarea (for multiline text input)
 
 ## What's next?
 
 - split sheet configuration from user data
 - share link: will offer a way to make someone else our sheet (without server)
 - print mode (convert editable field as static field, make multiple page on column, make it fit in A4 pages)
-- have more than text input as sheet placeholder: 
-    - text (static, readonly)
-    - computed (for value that depends than another one)
-    - checkbox/checkbox bar (for example for Call of Cthulhu v7 we can use this for life point)
-    - textarea (for multiline text input)
 - game/sheet selector
+- computed number input (for value that depends from other ones)
 - more game sheet
 - character selector
 - can keep more than one character for one particular game for one user
