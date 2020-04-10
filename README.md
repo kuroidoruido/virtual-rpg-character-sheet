@@ -25,15 +25,18 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 
 ## What's next?
 
-- split sheet configuration from user data
 - share link: will offer a way to make someone else our sheet (without server)
+- Save with Ctrl+s
+- Save needed indicator (when data are changed and we have not saved yet)
+- character selector
+- import/export feature
 - print mode (convert editable field as static field, make multiple page on column, make it fit in A4 pages)
 - game/sheet selector
 - computed number input (for value that depends from other ones)
 - more game sheet
-- character selector
 - can keep more than one character for one particular game for one user
 - free note zone (for taking notes during a session)
 - a simple dice roller
 - a sheet builder assistant (because it's really boring to make it through json...)
 - ability to set sheet width with kept ratio
+- insert image (character photo), should be save as Base64 to have no external files + resize/compress to be lightweight

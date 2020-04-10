@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 
+import { CharacterData } from 'src/app/model/character-data.model';
 import { NumberInputPlaceholderConfig } from 'src/app/model/placeholder.model';
 
 @Component({
@@ -9,4 +10,5 @@ import { NumberInputPlaceholderConfig } from 'src/app/model/placeholder.model';
 })
 export class PlaceholderNumberInputComponent {
   @Input() config: NumberInputPlaceholderConfig;
+  @Input() characterData: CharacterData;
 }

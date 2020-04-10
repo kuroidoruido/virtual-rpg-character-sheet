@@ -1,9 +1,9 @@
 <ng-template [ngIf]="config">
     <ng-container [ngSwitch]="config.type">
-        <app-placeholder-text-input *ngSwitchCase="'text-input'" [config]="config"></app-placeholder-text-input>
-        <app-placeholder-text-zone *ngSwitchCase="'text-zone'" [config]="config"></app-placeholder-text-zone>
-        <app-placeholder-number-input *ngSwitchCase="'number-input'" [config]="config"></app-placeholder-number-input>
-        <app-placeholder-number-computed *ngSwitchCase="'number-computed'" [config]="config"></app-placeholder-number-computed>
-        <app-placeholder-checkbox *ngSwitchCase="'checkbox'" [config]="config"></app-placeholder-checkbox>
+        <app-placeholder-text-input *ngSwitchCase="'text-input'" [config]="config" [characterData]="characterData"></app-placeholder-text-input>
+        <app-placeholder-text-zone *ngSwitchCase="'text-zone'" [config]="config" [characterData]="characterData"></app-placeholder-text-zone>
+        <app-placeholder-number-input *ngSwitchCase="'number-input'" [config]="config" [characterData]="characterData"></app-placeholder-number-input>
+        <app-placeholder-number-computed *ngSwitchCase="'number-computed'" [config]="config" [characterData]="characterData"></app-placeholder-number-computed>
+        <app-placeholder-checkbox *ngSwitchCase="'checkbox'" [config]="config" [characterData]="characterData"></app-placeholder-checkbox>
     </ng-container>
 </ng-template>

@@ -4,5 +4,5 @@
     [style.width]="config.width+'%'"
     [style.font-size]="config.fontSize ? (config.fontSize*100)+'%' : undefined"
     [id]="config.key">
-    {{ config.value }}
+    {{ characterData | compute:config }}
 </div>

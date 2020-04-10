@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 
+import { CharacterData } from 'src/app/model/character-data.model';
 import { CheckboxPlaceholderConfig } from 'src/app/model/placeholder.model';
 
 @Component({
@@ -9,4 +10,5 @@ import { CheckboxPlaceholderConfig } from 'src/app/model/placeholder.model';
 })
 export class PlaceholderCheckboxComponent {
   @Input() config: CheckboxPlaceholderConfig;
+  @Input() characterData: CharacterData;
 }

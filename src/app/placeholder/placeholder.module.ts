@@ -10,6 +10,7 @@ import { PlaceholderNumberInputComponent } from './placeholder-number-input/plac
 import { PlaceholderNumberComputedComponent } from './placeholder-number-computed/placeholder-number-computed.component';
 import { PlaceholderCheckboxComponent } from './placeholder-checkbox/placeholder-checkbox.component';
 import { PlaceholderComponent } from './placeholder/placeholder.component';
+import { ComputePipe } from './placeholder-number-computed/compute.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { PlaceholderComponent } from './placeholder/placeholder.component';
     PlaceholderNumberInputComponent, 
     PlaceholderNumberComputedComponent, 
     PlaceholderCheckboxComponent, 
-    PlaceholderComponent,
+    PlaceholderComponent, ComputePipe,
   ],
   imports: [
     CommonModule,

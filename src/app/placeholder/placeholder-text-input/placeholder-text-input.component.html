@@ -4,4 +4,5 @@
     [style.width]="config.width+'%'"
     [style.font-size]="config.fontSize ? (config.fontSize*100)+'%' : undefined"
     [name]="config.key"
-    [(ngModel)]="config.value" />
+    [(ngModel)]="characterData.values[config.key]"
+     />
