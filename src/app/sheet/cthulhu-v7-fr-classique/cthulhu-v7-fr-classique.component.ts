@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { CharacterData } from 'src/app/model/character-data.model';
 import { TwoPageSheetConfig } from 'src/app/model/sheet-config.model';
+import { HotkeysManagersService } from 'src/app/shared/hotkeys-manager/hotkeys-managers.service';
 import { SaveService } from 'src/app/sheet/shared/save/save.service';
 import cthulhuV7frClassique from './config.json';
 
@@ -17,11 +18,13 @@ export class CthulhuV7FrClassiqueComponent {
   sheetConfig: TwoPageSheetConfig = cthulhuV7frClassique as TwoPageSheetConfig;
   characterData: CharacterData = { values: {} };
   
-  constructor(private saveService: SaveService) {
+  constructor(public saveService: SaveService, hotkeysManager: HotkeysManagersService) {
     const saved = saveService.restore(GAME);
     if(saved !== undefined) {
       this.characterData = saved as CharacterData;
     }
+
+    hotkeysManager.CtrlS$.subscribe(() => this.save());
   }
 
   save() {

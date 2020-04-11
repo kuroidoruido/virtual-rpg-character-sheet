@@ -1,0 +1,23 @@
+<ng-template [ngIf]="saveService">
+    <ng-container [ngSwitch]="saveService.saveState() | async">
+        
+        <ng-template [ngSwitchCase]="'idle'">
+            <button mat-button (click)="save.emit()" class="save-button idle">
+                Save <mat-icon aria-hidden="true">save</mat-icon>
+            </button>
+        </ng-template>
+        
+        <ng-template [ngSwitchCase]="'saving'">
+            <button mat-button class="save-button saving" disabled>
+                Saving... <mat-icon aria-hidden="true">loop</mat-icon>
+            </button>
+        </ng-template>
+        
+        <ng-template [ngSwitchCase]="'saved'">
+            <button mat-button (click)="save.emit()" class="save-button saved">
+                Saved <mat-icon aria-hidden="true">done</mat-icon>
+            </button>
+        </ng-template>
+        
+    </ng-container>
+</ng-template>

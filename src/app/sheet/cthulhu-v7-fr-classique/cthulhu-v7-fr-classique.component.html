@@ -1,9 +1,7 @@
 <app-two-pages [sheetConfig]="sheetConfig" [characterData]="characterData"></app-two-pages>
 
 <div class="config-panel">
-    <button mat-button (click)="save()" class="save-button">
-        Save <mat-icon aria-hidden="true">save</mat-icon>
-    </button>
+    <app-save-button (click)="save()"></app-save-button>
     <!--
         <label for="page-size">
             Page width ({{ sheetConfig.pageConfig.pageWidth}}%): 

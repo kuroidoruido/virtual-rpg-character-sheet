@@ -7,11 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { CthulhuV7FrClassiqueModule } from './sheet/cthulhu-v7-fr-classique';
+import { HotkeysManagerModule } from './shared/hotkeys-manager/hotkeys-manager.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [ AppComponent ],
   imports: [
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
@@ -19,6 +18,8 @@ import { CthulhuV7FrClassiqueModule } from './sheet/cthulhu-v7-fr-classique';
     BrowserModule,
     BrowserAnimationsModule,
     
+    HotkeysManagerModule,
+
     CthulhuV7FrClassiqueModule,
   ],
   providers: [],
