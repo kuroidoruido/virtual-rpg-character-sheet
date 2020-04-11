@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
+import { ComputePipe } from './compute.pipe';
 import { PlaceholderNumberComputedComponent } from './placeholder-number-computed.component';
 
 describe('PlaceholderNumberComputedComponent', () => {
@@ -9,7 +10,7 @@ describe('PlaceholderNumberComputedComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlaceholderNumberComputedComponent ],
+      declarations: [ PlaceholderNumberComputedComponent, ComputePipe ],
       imports: [ FormsModule ],
     })
     .compileComponents();
@@ -19,6 +20,7 @@ describe('PlaceholderNumberComputedComponent', () => {
     fixture = TestBed.createComponent(PlaceholderNumberComputedComponent);
     component = fixture.componentInstance;
     component.config = {} as any;
+    component.characterData = { values: {} };
     fixture.detectChanges();
   });
 

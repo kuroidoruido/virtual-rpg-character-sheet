@@ -19,6 +19,7 @@ describe('PlaceholderTextInputComponent', () => {
     fixture = TestBed.createComponent(PlaceholderTextInputComponent);
     component = fixture.componentInstance;
     component.config = {} as any;
+    component.characterData = { values: {} };
     fixture.detectChanges();
   });
 

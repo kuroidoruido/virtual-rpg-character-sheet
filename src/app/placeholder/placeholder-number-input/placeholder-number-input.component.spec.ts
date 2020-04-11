@@ -19,6 +19,7 @@ describe('PlaceholderNumberInputComponent', () => {
     fixture = TestBed.createComponent(PlaceholderNumberInputComponent);
     component = fixture.componentInstance;
     component.config = {} as any;
+    component.characterData = { values: {} };
     fixture.detectChanges();
   });
 

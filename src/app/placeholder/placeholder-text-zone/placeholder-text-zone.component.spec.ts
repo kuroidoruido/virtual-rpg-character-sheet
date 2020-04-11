@@ -19,6 +19,7 @@ describe('PlaceholderTextZoneComponent', () => {
     fixture = TestBed.createComponent(PlaceholderTextZoneComponent);
     component = fixture.componentInstance;
     component.config = {} as any;
+    component.characterData = { values: {} };
     fixture.detectChanges();
   });
 
