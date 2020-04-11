@@ -5,7 +5,7 @@ import { NumberComputedPlaceholderConfig } from 'src/app/model/placeholder.model
 
 @Pipe({
   name: 'compute',
-  pure: true,
+  pure: false,
 })
 export class ComputePipe implements PipeTransform {
 

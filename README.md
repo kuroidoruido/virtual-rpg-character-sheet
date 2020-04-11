@@ -22,17 +22,17 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
     - text (static, readonly)
     - checkbox/checkbox bar (for example for Call of Cthulhu v7 we can use this for life point)
     - textarea (for multiline text input)
+    - computed input (for value that depends from other ones)
+- Save with Ctrl+Shift+s
 
 ## What's next?
 
 - share link: will offer a way to make someone else our sheet (without server)
-- Save with Ctrl+s
 - Save needed indicator (when data are changed and we have not saved yet)
 - character selector
 - import/export feature
 - print mode (convert editable field as static field, make multiple page on column, make it fit in A4 pages)
 - game/sheet selector
-- computed number input (for value that depends from other ones)
 - more game sheet
 - can keep more than one character for one particular game for one user
 - free note zone (for taking notes during a session)

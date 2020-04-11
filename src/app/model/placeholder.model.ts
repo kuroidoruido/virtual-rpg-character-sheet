@@ -31,9 +31,10 @@ export interface NumberInputPlaceholderConfig extends BasePlaceholderConfig {
     type: 'number-input';
 }
 
+export type NumberComputeFunction = (characterData: CharacterData) => CharacterDataValue;
 export interface NumberComputedPlaceholderConfig extends BasePlaceholderConfig {
     type: 'number-computed';
-    compute: (characterData: CharacterData) => CharacterDataValue;
+    compute: NumberComputeFunction;
 }
 
 export interface CheckboxPlaceholderConfig extends BasePlaceholderConfig {
