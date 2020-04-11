@@ -40,3 +40,4 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - a sheet builder assistant (because it's really boring to make it through json...)
 - ability to set sheet width with kept ratio
 - insert image (character photo), should be save as Base64 to have no external files + resize/compress to be lightweight
+- support multiple ratio and orientation (A4 portrait, A4 landscape, ...)
