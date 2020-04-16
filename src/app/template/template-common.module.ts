@@ -18,7 +18,7 @@ const commontModules: NgModule['exports'] = [
 
 @NgModule({
     imports: commontModules,
-    exports: commontModules, 
+    exports: commontModules,
 })
 export class TemplateCommonModule {
 }

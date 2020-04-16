@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { CharacterData } from 'src/app/model/character-data.model';
 import { TwoPageSheetConfig } from 'src/app/model/sheet-config.model';
 import { HotkeysManagersService } from 'src/app/shared/hotkeys-manager/hotkeys-managers.service';
-import { SaveService } from 'src/app/sheet/shared/save/save.service';
+import { SaveService } from 'src/app/shared/save/save.service';
 import { config } from './config';
 
 const GAME = 'cthulhu-v7-fr-classique';// ! TODO remove this when data values will be separated from config
@@ -15,6 +15,7 @@ const GAME = 'cthulhu-v7-fr-classique';// ! TODO remove this when data values wi
 })
 export class CthulhuV7FrClassiqueComponent {
 
+  game = GAME;
   sheetConfig: TwoPageSheetConfig = config;
   characterData: CharacterData = { values: {} };
   
