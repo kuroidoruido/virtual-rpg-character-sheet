@@ -1,9 +1,12 @@
 import { Component, Output, EventEmitter, AfterViewInit, ViewChild, Input } from '@angular/core';
 
 import { CdkDragMove } from '@angular/cdk/drag-drop';
-import { NoteZoneComponent } from 'src/app/note-zone/note-zone.component';
 import { ReplaySubject } from 'rxjs';
 import { map, first } from 'rxjs/operators';
+
+import { HotkeysManagersService } from 'src/app/shared/hotkeys-manager/hotkeys-managers.service';
+import { SaveService } from 'src/app/shared/save/save.service';
+import { SheetStateService } from 'src/app/shared/sheet-state/sheet-state.service';
 
 @Component({
   selector: 'app-sheet-wrapper',
@@ -11,8 +14,7 @@ import { map, first } from 'rxjs/operators';
   styleUrls: ['./sheet-wrapper.component.scss']
 })
 export class SheetWrapperComponent implements AfterViewInit {
-  @Input() game = '';
-  @Output() save = new EventEmitter<void>();
+  game = '';
 
   @ViewChild('sheetWrapper', { static: true }) sheetWrapperElement: { nativeElement: HTMLElement } | undefined;
 
@@ -21,7 +23,10 @@ export class SheetWrapperComponent implements AfterViewInit {
 
   private last = 0;
   
-  constructor() { }
+  constructor(private sheetStateService: SheetStateService, private saveService: SaveService, hotkeysManager: HotkeysManagersService) {
+    hotkeysManager.CtrlS$.subscribe(() => this.save());
+    this.game = this.sheetStateService.currentGame;
+  }
 
   ngAfterViewInit(): void {
     if(this.sheetWrapperElement !== undefined && this.sheetWrapperElement.nativeElement !== undefined) {
@@ -41,6 +46,10 @@ export class SheetWrapperComponent implements AfterViewInit {
 
   dragEnd() {
     this.last = 0;
+  }
+
+  save() {
+    this.saveService.save(this.game, this.sheetStateService.currentCharacterData);
   }
 
   private resize(widthChange: number) {

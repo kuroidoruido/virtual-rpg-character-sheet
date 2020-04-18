@@ -1,7 +1,7 @@
 <div class="sheet-note-wrapper">
     <div class="sheet-wrapper" #sheetWrapper [style.width]="sheetWrapperWidthPx$ | async">
         <ng-content></ng-content>
-        <app-save-button (click)="save.emit()"></app-save-button>
+        <app-save-button (click)="save()"></app-save-button>
     </div>
     <div class="resize-holder-wrapper">
         <div class="resize-holder" cdkDrag cdkDragLockAxis="x" (cdkDragMoved)="dragMove($event)" (cdkDragEnded)="dragEnd()"></div>
