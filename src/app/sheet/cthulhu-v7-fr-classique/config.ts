@@ -2,8 +2,8 @@ import { CharacterData } from 'src/app/model/character-data.model';
 import { NumberComputedPlaceholderConfig } from 'src/app/model/placeholder.model';
 import { TwoPageSheetConfig } from 'src/app/model/sheet-config.model';
 
-function difficulte(config: Omit<NumberComputedPlaceholderConfig, 'compute'>, suffix: string, divider: number): NumberComputedPlaceholderConfig {
-  const key = config.key.replace(suffix, '');
+function difficulte(config: Omit<NumberComputedPlaceholderConfig, 'compute'>, suffix: string, divider: number, baseValueKey?: string): NumberComputedPlaceholderConfig {
+  const key = baseValueKey || config.key.replace(suffix, '');
   return {
     ...config, 
     compute: (data: CharacterData) => {
@@ -16,12 +16,12 @@ function difficulte(config: Omit<NumberComputedPlaceholderConfig, 'compute'>, su
   };
 }
 
-function demi(config: Omit<NumberComputedPlaceholderConfig, 'compute'>): NumberComputedPlaceholderConfig {
-  return difficulte(config, '_2', 2);
+function demi(config: Omit<NumberComputedPlaceholderConfig, 'compute'>, baseValueKey?: string): NumberComputedPlaceholderConfig {
+  return difficulte(config, '_2', 2, baseValueKey);
 }
 
-function cinquieme(config: Omit<NumberComputedPlaceholderConfig, 'compute'>): NumberComputedPlaceholderConfig {
-  return difficulte(config, '_5', 5);
+function cinquieme(config: Omit<NumberComputedPlaceholderConfig, 'compute'>, baseValueKey?: string): NumberComputedPlaceholderConfig {
+  return difficulte(config, '_5', 5, baseValueKey);
 }
 
 export const config: TwoPageSheetConfig = {
@@ -433,9 +433,9 @@ export const config: TwoPageSheetConfig = {
 
       { key: 'combat.impact', x: 89.3, y: 85.1, width: 2.1, type: 'number-input'},
       { key: 'combat.carrure', x: 89.3, y: 88.1, width: 2.1, type: 'number-input'},
-      { key: 'combat.esquive', x: 89.3, y: 91.3, width: 2.1, type: 'number-input'},
-      demi({ key: 'combat.esquive_2', x: 92.2, y: 91.3, width: 1.5, fontSize: 0.5, type: 'number-computed'}),
-      cinquieme({ key: 'combat.esquive_5', x: 92.2, y: 92.35, width: 1.5, fontSize: 0.5, type: 'number-computed'})
+      { key: 'combat.esquive', x: 89.3, y: 91.3, width: 2.1, type: 'number-computed', compute: (data) => data.values['competences.esquive']},
+      demi({ key: 'combat.esquive_2', x: 92.2, y: 91.3, width: 1.5, fontSize: 0.5, type: 'number-computed'}, 'competences.esquive'),
+      cinquieme({ key: 'combat.esquive_5', x: 92.2, y: 92.35, width: 1.5, fontSize: 0.5, type: 'number-computed'}, 'competences.esquive')
     ],
     page2: [
       { key: 'profil.description_1', x: 14, y: 6.5, width: 35.5, type: 'text-input'},
