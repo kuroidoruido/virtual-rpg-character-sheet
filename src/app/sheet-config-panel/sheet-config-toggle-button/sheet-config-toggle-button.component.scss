@@ -1,0 +1,11 @@
+:host {
+    button {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(255,255,255,0.5);
+        padding-left: 0.4em;
+        padding-right: 0.4em;
+        min-width: fit-content;
+    }
+}

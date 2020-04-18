@@ -1,0 +1,26 @@
+:host {
+    display: block;
+    position: relative;
+    background-color: white;
+    border-top: lightgray 2px solid;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 99.9vw;
+    margin-left: auto;
+    margin-right: auto;
+    
+    .wrapper {
+        padding-left: 1em;
+        padding-right: 1em;
+
+        .share-link-input {
+            width: 30em;
+
+            mat-icon {
+                cursor: pointer;
+            }
+        }
+    }
+}

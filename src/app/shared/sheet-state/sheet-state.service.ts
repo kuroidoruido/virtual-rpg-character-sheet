@@ -26,6 +26,11 @@ export class SheetStateService {
       this.currentCharacterData = saved as CharacterData;
     }
 
+    const characterDecodedFromUrl = this.shareLinkService.decodeShareLink();
+    if(characterDecodedFromUrl !== undefined) {
+      this.currentCharacterData = characterDecodedFromUrl;
+    }
+
     return this.currentCharacterData;
   }
   

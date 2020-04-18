@@ -1,0 +1,16 @@
+<ng-template [ngIf]="sheetConfigPanelService.panelIsOpened$ | async">
+    <div class="wrapper">
+        <button mat-stroked-button (click)="toggleShowShareLink()">Get share link</button>
+        <ng-template [ngIf]="showShareLink">
+            <form>
+                <mat-form-field class="share-link-input">
+                    <mat-label>Share link</mat-label>
+                    <input matInput placeholder="share link" [value]="shareLink" #shareLinkInput />
+                    <mat-hint align="start"><strong>This link will give a copy of your current character sheet.</strong></mat-hint>
+                    <mat-icon matSuffix (click)="copyShareLinkToClipboard()">file_copy</mat-icon>
+                </mat-form-field>
+            </form>
+        </ng-template>
+    </div>
+    <app-sheet-config-toggle-button [forceShow]="true"></app-sheet-config-toggle-button>
+</ng-template>

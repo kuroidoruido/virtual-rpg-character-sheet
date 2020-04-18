@@ -25,10 +25,10 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
     - computed input (for value that depends from other ones)
 - Save with Ctrl+Shift+s
 - free note zone (for taking notes during a session)
+- share link: will offer a way to make someone else our sheet (without server)
 
 ## What's next?
 
-- share link: will offer a way to make someone else our sheet (without server)
 - Save needed indicator (when data are changed and we have not saved yet)
 - character selector
 - import/export feature
@@ -39,4 +39,5 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - a simple dice roller
 - a sheet builder assistant (because it's really boring to make it through json...)
 - insert image (character photo), should be save as Base64 to have no external files + resize/compress to be lightweight
+- radio element (grouped) with differents visual shape (cross, circle, square) 
 - support multiple ratio and orientation (A4 portrait, A4 landscape, ...)
