@@ -42,3 +42,4 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - insert image (character photo), should be save as Base64 to have no external files + resize/compress to be lightweight
 - support multiple ratio and orientation (A4 portrait, A4 landscape, ...)
 - optional orientation for input text (some character sheet have diagonal input text)
+- give user access to prettify raw data map (add a button in sheet config panel to access a simple array of all keys/values, maybe with edition)
