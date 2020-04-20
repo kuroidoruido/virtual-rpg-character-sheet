@@ -1,22 +1,22 @@
 
-@mixin checkbox-shape($fill-color) {
+@mixin checkbox-shape() {
     $border-width: 2px;
     width: 100%;
     padding-top: 100%;
 
     &.checked {
         &.square {
-            border: solid $fill-color $border-width;
+            border: solid var(--color-primary) $border-width;
         }
         &.circle {
-            border: solid $fill-color $border-width;
+            border: solid var(--color-primary) $border-width;
             border-radius: 50%;
         }
         &.filled-square {
-            background-color: $fill-color;
+            background-color: var(--color-primary);
         }
         &.filled-circle {
-            background-color: $fill-color;
+            background-color: var(--color-primary);
             border-radius: 50%;
         }
     }

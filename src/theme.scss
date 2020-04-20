@@ -11,3 +11,6 @@ $custom-theme: mat-light-theme($custom-primary, $custom-accent);
 @include angular-material-theme($custom-theme);
 
 $color-primary: mat-color($custom-primary);
+:root {
+    --color-primary: #{$color-primary};
+}
