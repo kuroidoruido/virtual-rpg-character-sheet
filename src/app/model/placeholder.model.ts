@@ -38,16 +38,17 @@ export interface NumberComputedPlaceholderConfig extends BasePlaceholderConfig {
     compute: NumberComputeFunction;
 }
 
+type CheckboxStyle = 'square' | 'circle' | 'filled-square' | 'filled-circle';
+
 export interface CheckboxPlaceholderConfig extends BasePlaceholderConfig {
     type: 'checkbox';
+    style?: CheckboxStyle;
 }
-
-type CheckboxGroupStyle = 'square' | 'circle' | 'filled-square' | 'filled-circle';
 
 export interface CheckboxGroupPlaceholderConfig extends BasePlaceholderConfig {
     type: 'checkbox-group';
+    style?: CheckboxStyle;
     group: string;
-    style?: CheckboxGroupStyle;
 }
 
 export type PlaceholderConfig = 

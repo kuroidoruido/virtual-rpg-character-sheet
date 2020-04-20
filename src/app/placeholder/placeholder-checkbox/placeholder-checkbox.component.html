@@ -1,9 +1,8 @@
-<mat-checkbox
+<div
     [style.left]="config.x+'%'" 
     [style.top]="config.y+'%'" 
     [style.width]="config.width+'%'"
     [style.font-size]="config.fontSize ? (config.fontSize*100)+'%' : undefined"
-    [name]="config.key"
-    [(ngModel)]="characterData.values[config.key]"
-    color="primary">
-</mat-checkbox>
+    >
+    <div class="checkbox" [ngClass]="ngClass" (click)="toggleCheckbox()"></div>
+</div>

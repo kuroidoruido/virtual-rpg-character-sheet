@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { MatCheckboxModule } from '@angular/material/checkbox'; 
-
 import { PlaceholderTextZoneComponent } from './placeholder-text-zone/placeholder-text-zone.component';
 import { PlaceholderTextInputComponent } from './placeholder-text-input/placeholder-text-input.component';
 import { PlaceholderNumberInputComponent } from './placeholder-number-input/placeholder-number-input.component';
@@ -27,8 +25,6 @@ import { PlaceholderCheckboxGroupComponent } from './placeholder-checkbox-group/
   imports: [
     CommonModule,
     FormsModule,
-
-    MatCheckboxModule,
   ],
   exports: [PlaceholderComponent],
 })

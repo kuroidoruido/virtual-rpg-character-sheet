@@ -1,6 +1,14 @@
+@import '~src/theme';
+@import '../checkbox';
+
 :host {
-    mat-checkbox {
+    div {
         display: block;
         position: absolute;
+        outline: dotted thin sienna;
+
+        .checkbox {
+            @include checkbox-shape($color-primary);
+        }
     }
 }

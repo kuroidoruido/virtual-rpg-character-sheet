@@ -1,33 +1,14 @@
 @import '~src/theme';
+@import '../checkbox';
 
 :host {
-    $fill-color: $color-primary;
-    $border-width: 2px;
     label {
         display: block;
         position: absolute;
         // outline: dotted thin green;
 
         .checkbox {
-            width: 100%;
-            padding-top: 100%;
-
-            &.checked {
-                &.square {
-                    border: solid $fill-color $border-width;
-                }
-                &.circle {
-                    border: solid $fill-color $border-width;
-                    border-radius: 50%;
-                }
-                &.filled-square {
-                    background-color: $fill-color;
-                }
-                &.filled-circle {
-                    background-color: $fill-color;
-                    border-radius: 50%;
-                }
-            }
+            @include checkbox-shape($color-primary);
         }
 
         input {
