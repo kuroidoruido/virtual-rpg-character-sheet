@@ -38,7 +38,7 @@ export interface NumberComputedPlaceholderConfig extends BasePlaceholderConfig {
     compute: NumberComputeFunction;
 }
 
-type CheckboxStyle = 'square' | 'circle' | 'filled-square' | 'filled-circle';
+type CheckboxStyle = 'cross' | 'tick' | 'square' | 'circle' | 'filled-square' | 'filled-circle';
 
 export interface CheckboxPlaceholderConfig extends BasePlaceholderConfig {
     type: 'checkbox';

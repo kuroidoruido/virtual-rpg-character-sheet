@@ -1,10 +1,32 @@
 
 @mixin checkbox-shape() {
     $border-width: 2px;
+
     width: 100%;
     padding-top: 100%;
 
     &.checked {
+        &.cross {
+            &:after {
+                position: relative;
+                top: -1em;
+                z-index: 5;
+                width: 100%;
+                padding-top: 100%;
+                color: var(--color-primary);
+                content: "\2A2F";
+            }
+        }
+        &.tick {
+            &:after {
+                position: relative;
+                top: -1em;
+                width: 100%;
+                padding-top: 100%;
+                color: var(--color-primary);
+                content: "\2713";
+            }
+        }
         &.square {
             border: solid var(--color-primary) $border-width;
         }
