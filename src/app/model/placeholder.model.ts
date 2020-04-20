@@ -7,7 +7,8 @@ export type PlaceholderType =
     | 'text-zone' 
     | 'number-input' 
     | 'number-computed' 
-    | 'checkbox';
+    | 'checkbox'
+    | 'checkbox-group';
 
 interface BasePlaceholderConfig {
     type: PlaceholderType;
@@ -41,9 +42,18 @@ export interface CheckboxPlaceholderConfig extends BasePlaceholderConfig {
     type: 'checkbox';
 }
 
+type CheckboxGroupStyle = 'square' | 'circle' | 'filled-square' | 'filled-circle';
+
+export interface CheckboxGroupPlaceholderConfig extends BasePlaceholderConfig {
+    type: 'checkbox-group';
+    group: string;
+    style?: CheckboxGroupStyle;
+}
+
 export type PlaceholderConfig = 
     | TextInputPlaceholderConfig 
     | TextZonePlaceholderConfig
     | NumberInputPlaceholderConfig
     | NumberComputedPlaceholderConfig
-    | CheckboxPlaceholderConfig;
+    | CheckboxPlaceholderConfig
+    | CheckboxGroupPlaceholderConfig;

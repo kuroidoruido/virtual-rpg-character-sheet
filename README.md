@@ -26,18 +26,19 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - Save with Ctrl+Shift+s
 - free note zone (for taking notes during a session)
 - share link: will offer a way to make someone else our sheet (without server)
+- radio element (grouped) with differents visual shape (cross, circle, square) 
 
 ## What's next?
 
 - Save needed indicator (when data are changed and we have not saved yet)
-- character selector
 - import/export feature
 - print mode (convert editable field as static field, make multiple page on column, make it fit in A4 pages)
 - game/sheet selector
 - more game sheet
 - can keep more than one character for one particular game for one user
+- character selector
 - a simple dice roller
 - a sheet builder assistant (because it's really boring to make it through json...)
 - insert image (character photo), should be save as Base64 to have no external files + resize/compress to be lightweight
-- radio element (grouped) with differents visual shape (cross, circle, square) 
 - support multiple ratio and orientation (A4 portrait, A4 landscape, ...)
+- optional orientation for input text (some character sheet have diagonal input text)
