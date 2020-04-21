@@ -4,7 +4,7 @@ import { CharacterData } from 'src/app/model/character-data.model';
 import { Observable, ReplaySubject, Subject } from 'rxjs';
 
 const LOCAL_STORAGE_KEY_FRAGMENT_SEPARATOR = '.';
-const LOCAL_STORAGE_BASE_KEY = 'VirtualRgpCharacterSheet';
+const LOCAL_STORAGE_BASE_KEY = 'VirtualRpgCharacterSheet';
 const LOCAL_STORAGE_SHEET_DATA_KEY = 'characterData';
 const LOCAL_STORAGE_NOTE_DATA_KEY = 'notes';
 
