@@ -10,18 +10,18 @@ import { ShareLinkService } from 'src/app/shared/share-link/share-link.service';
 })
 export class SheetStateService {
 
-  currentGame: string | undefined;
+  currentGameSheetId: string | undefined;
   currentSheetConfig: SheetConfig | undefined;
   currentCharacterData: CharacterData | undefined;
 
   constructor(private saveService: SaveService, private shareLinkService: ShareLinkService) { }
 
-  init(game: string, sheetConfig: SheetConfig): CharacterData {
-    this.currentGame = game;
+  init(sheetConfig: SheetConfig): CharacterData {
+    this.currentGameSheetId = sheetConfig.gameId + '.' + sheetConfig.sheetId;
     this.currentSheetConfig = sheetConfig;
     this.currentCharacterData = { values: {} };
 
-    const saved = this.saveService.restore(this.currentGame);
+    const saved = this.saveService.restore(this.currentGameSheetId);
     if(saved !== undefined) {
       this.currentCharacterData = saved as CharacterData;
     }

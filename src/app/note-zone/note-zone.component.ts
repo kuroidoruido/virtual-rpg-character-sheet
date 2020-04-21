@@ -7,7 +7,7 @@ import { SaveService } from '../shared/save/save.service';
   styleUrls: ['./note-zone.component.scss']
 })
 export class NoteZoneComponent implements OnInit {
-  @Input() game = '';
+  @Input() gameSheetId = '';
 
   notes: string = '';
 
@@ -15,7 +15,7 @@ export class NoteZoneComponent implements OnInit {
   }
 
   ngOnInit() {
-    const saved = this.saveService.restoreNotes(this.game);
+    const saved = this.saveService.restoreNotes(this.gameSheetId);
     if(saved !== undefined) {
       this.notes = saved;
     }
@@ -23,6 +23,6 @@ export class NoteZoneComponent implements OnInit {
 
   change(event: any) {
     this.notes = event.target.value;
-    this.saveService.saveNotes(this.game, this.notes);
+    this.saveService.saveNotes(this.gameSheetId, this.notes);
   }
 }

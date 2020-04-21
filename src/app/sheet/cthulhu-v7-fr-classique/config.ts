@@ -25,7 +25,8 @@ function cinquieme(config: Omit<NumberComputedPlaceholderConfig, 'compute'>, bas
 }
 
 export const config: TwoPageSheetConfig = {
-  game: 'cthulhu-v7-fr-classique',
+  gameId: 'cthulhu-v7',
+  sheetId: 'fr-classique',
   pageConfig: {
     pages: [ 'page-1.png', 'page-2.png' ],
     pageFormat: 'A4',

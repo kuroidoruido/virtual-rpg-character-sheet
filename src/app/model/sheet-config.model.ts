@@ -21,15 +21,17 @@ export interface SheetDataConfig {
     pages: string[];
 }
 
-export interface OnePageSheetConfig {
-    game: string;
-    content: OnePageContent;
+interface BaseSheetConfig {
+    gameId: string;
+    sheetId: string;
     pageConfig: SheetDataConfig;
 }
-export interface TwoPageSheetConfig {
-    game: string;
+
+export interface OnePageSheetConfig extends BaseSheetConfig {
+    content: OnePageContent;
+}
+export interface TwoPageSheetConfig extends BaseSheetConfig {
     content: TwoPageContent;
-    pageConfig: SheetDataConfig;
 }
 
 export type SheetConfig = OnePageSheetConfig | TwoPageSheetConfig;

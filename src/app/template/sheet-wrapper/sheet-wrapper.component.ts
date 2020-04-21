@@ -14,7 +14,7 @@ import { SheetStateService } from 'src/app/shared/sheet-state/sheet-state.servic
   styleUrls: ['./sheet-wrapper.component.scss']
 })
 export class SheetWrapperComponent implements AfterViewInit {
-  game = '';
+  gameSheetId = '';
 
   @ViewChild('sheetWrapper', { static: true }) sheetWrapperElement: { nativeElement: HTMLElement } | undefined;
 
@@ -25,7 +25,7 @@ export class SheetWrapperComponent implements AfterViewInit {
   
   constructor(private sheetStateService: SheetStateService, private saveService: SaveService, hotkeysManager: HotkeysManagersService) {
     hotkeysManager.CtrlS$.subscribe(() => this.save());
-    this.game = this.sheetStateService.currentGame;
+    this.gameSheetId = this.sheetStateService.currentGameSheetId;
   }
 
   ngAfterViewInit(): void {
@@ -49,7 +49,7 @@ export class SheetWrapperComponent implements AfterViewInit {
   }
 
   save() {
-    this.saveService.save(this.game, this.sheetStateService.currentCharacterData);
+    this.saveService.save(this.gameSheetId, this.sheetStateService.currentCharacterData);
   }
 
   private resize(widthChange: number) {

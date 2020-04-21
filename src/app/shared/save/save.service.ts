@@ -21,9 +21,9 @@ export class SaveService {
     this.saveState$.next('idle');
   }
 
-  private getStorageKey(game: string, typeKey: string): string {
+  private getStorageKey(gameSheetId: string, typeKey: string): string {
     return LOCAL_STORAGE_BASE_KEY 
-      + LOCAL_STORAGE_KEY_FRAGMENT_SEPARATOR + game 
+      + LOCAL_STORAGE_KEY_FRAGMENT_SEPARATOR + gameSheetId 
       + LOCAL_STORAGE_KEY_FRAGMENT_SEPARATOR +  typeKey;
   }
 
@@ -31,32 +31,32 @@ export class SaveService {
     return this.saveState$.asObservable();
   }
 
-  save(game: string, characterData: CharacterData) {
+  save(gameSheetId: string, characterData: CharacterData) {
     this.saveState$.next('saving');
-    localStorage.setItem(this.getStorageKey(game, LOCAL_STORAGE_SHEET_DATA_KEY), JSON.stringify(characterData));
+    localStorage.setItem(this.getStorageKey(gameSheetId, LOCAL_STORAGE_SHEET_DATA_KEY), JSON.stringify(characterData));
     this.saveState$.next('saved');
     // setTimeout is for let user see saved info
     setTimeout(() => this.saveState$.next('idle'), 2000);
   }
 
-  restore(game: string): CharacterData | undefined {
-    const saved = localStorage.getItem(this.getStorageKey(game, LOCAL_STORAGE_SHEET_DATA_KEY));
+  restore(gameSheetId: string): CharacterData | undefined {
+    const saved = localStorage.getItem(this.getStorageKey(gameSheetId, LOCAL_STORAGE_SHEET_DATA_KEY));
     if(saved !== undefined && saved !== null) {
       return JSON.parse(saved);
     }
     return undefined;
   }
 
-  saveNotes(game: string, notes: string) {
+  saveNotes(gameSheetId: string, notes: string) {
     this.saveState$.next('saving');
-    localStorage.setItem(this.getStorageKey(game, LOCAL_STORAGE_NOTE_DATA_KEY), JSON.stringify(notes.split('\n')));
+    localStorage.setItem(this.getStorageKey(gameSheetId, LOCAL_STORAGE_NOTE_DATA_KEY), JSON.stringify(notes.split('\n')));
     this.saveState$.next('saved');
     // setTimeout is for let user see saved info
     setTimeout(() => this.saveState$.next('idle'), 2000);
   }
 
-  restoreNotes(game: string): string | undefined {
-    const saved = localStorage.getItem(this.getStorageKey(game, LOCAL_STORAGE_NOTE_DATA_KEY));
+  restoreNotes(gameSheetId: string): string | undefined {
+    const saved = localStorage.getItem(this.getStorageKey(gameSheetId, LOCAL_STORAGE_NOTE_DATA_KEY));
     if(saved !== undefined && saved !== null) {
       return JSON.parse(saved).join('\n');
     }

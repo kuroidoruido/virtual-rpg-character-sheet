@@ -5,8 +5,6 @@ import { TwoPageSheetConfig } from 'src/app/model/sheet-config.model';
 import { SheetStateService } from 'src/app/shared/sheet-state/sheet-state.service';
 import { config } from './config';
 
-const GAME = 'cthulhu-v7-fr-classique';// ! TODO remove this when data values will be separated from config
-
 @Component({
   selector: 'app-cthulhu-v7-fr-classique',
   templateUrl: './cthulhu-v7-fr-classique.component.html',
@@ -14,11 +12,10 @@ const GAME = 'cthulhu-v7-fr-classique';// ! TODO remove this when data values wi
 })
 export class CthulhuV7FrClassiqueComponent {
 
-  game = GAME;
   sheetConfig: TwoPageSheetConfig = config;
   characterData: CharacterData;
   
   constructor(sheetStateService: SheetStateService) {
-    this.characterData = sheetStateService.init(this.game, this.sheetConfig);
+    this.characterData = sheetStateService.init(this.sheetConfig);
   }
 }
