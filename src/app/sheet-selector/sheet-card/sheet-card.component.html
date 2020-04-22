@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{ game.gameName }}&nbsp;{{ sheet.sheetName }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="square-box-container">
+            <div class="square-box-image-container">
+                <img class="sheet-image" [src]="'assets/'+sheet.imgAsset" [alt]="'Thumbnail for '+sheet.sheetName" />
+            </div>
+        </div>
+    </mat-card-content>
+    <mat-card-footer>
+        <mat-chip-list aria-label="Character selection">
+            <mat-chip *ngFor="let character of sheet.characters" color="primary" selected (click)="openCharacterSheet(character)">{{ character.name }}</mat-chip>
+            <ng-template [ngIf]="sheet.characters.length === 0">
+                <mat-chip trailingIcon="add" (click)="createCharacterSheet()">New character</mat-chip>
+            </ng-template>
+          </mat-chip-list>
+    </mat-card-footer>
+</mat-card>
+  

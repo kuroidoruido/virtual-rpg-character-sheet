@@ -19,7 +19,7 @@ export class SheetStateService {
   init(sheetConfig: SheetConfig): CharacterData {
     this.currentGameSheetId = sheetConfig.gameId + '.' + sheetConfig.sheetId;
     this.currentSheetConfig = sheetConfig;
-    this.currentCharacterData = { values: {} };
+    this.currentCharacterData = { values: { characterName: '' } };
 
     const saved = this.saveService.restore(this.currentGameSheetId);
     if(saved !== undefined) {

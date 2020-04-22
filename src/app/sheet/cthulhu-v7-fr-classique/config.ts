@@ -35,7 +35,7 @@ export const config: TwoPageSheetConfig = {
   content: {
     pageCount: 2,
     page1: [
-      { key: 'etatCivil.nom', x: 9.7, y: 5.9, width: 26.5, type: 'text-input'},
+      { key: 'characterName', x: 9.7, y: 5.9, width: 26.5, type: 'text-input'},
       { key: 'etatCivil.joueur', x: 10.5, y: 8, width: 25.7, type: 'text-input'},
       { key: 'etatCivil.occupation', x: 14, y: 9.9, width: 22.2, type: 'text-input'},
       { key: 'etatCivil.age', x: 9.5, y: 11.9, width: 11, type: 'text-input'},

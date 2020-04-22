@@ -33,8 +33,11 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - Save needed indicator (when data are changed and we have not saved yet)
 - import/export feature
 - print mode (convert editable field as static field, make multiple page on column, make it fit in A4 pages)
-- game/sheet selector
-- more game sheet
+- more game sheet:
+    - Nain & Jardin
+    - Billet Rouge
+    - Cats La Mascarade
+    - ...
 - can keep more than one character for one particular game for one user
 - character selector
 - a simple dice roller
@@ -44,3 +47,5 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - optional orientation for input text (some character sheet have diagonal input text)
 - give user access to prettify raw data map (add a button in sheet config panel to access a simple array of all keys/values, maybe with edition)
 - checkbox (and checkbox group) can toggle between multiple style (for example: none, filled circle, cross)
+- sheet list page with multiple tabs: all sheets, own characters
+- home page with product presentation

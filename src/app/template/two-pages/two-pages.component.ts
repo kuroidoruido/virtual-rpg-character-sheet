@@ -11,7 +11,7 @@ import { TwoPageSheetConfig } from 'src/app/model/sheet-config.model';
 export class TwoPagesComponent implements OnInit {
 
   @Input() sheetConfig!: TwoPageSheetConfig;
-  @Input() characterData: CharacterData = { values: {} };
+  @Input() characterData: CharacterData = { values: { characterName: '' } };
 
   ngOnInit(): void {
     if(this.sheetConfig === undefined) {

@@ -1,0 +1,35 @@
+
+$card-width: 16vw;
+
+mat-card {
+    width: $card-width;
+
+    .square-box-container {
+        position: relative;
+        width: 100%;
+        padding-top: 100%;
+        .square-box-image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .sheet-image {
+                max-height: $card-width;
+            }
+        }
+    }
+
+    mat-card-footer {
+        padding-bottom: 1em;
+        mat-chip-list {
+            display: inline-block;
+            margin: 0 2em;
+            mat-chip {
+                cursor: pointer;
+            }
+        }
+    }
+}

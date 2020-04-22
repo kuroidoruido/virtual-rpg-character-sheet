@@ -3,10 +3,10 @@ import { Injectable } from '@angular/core';
 import { CharacterData } from 'src/app/model/character-data.model';
 import { Observable, ReplaySubject, Subject } from 'rxjs';
 
-const LOCAL_STORAGE_KEY_FRAGMENT_SEPARATOR = '.';
-const LOCAL_STORAGE_BASE_KEY = 'VirtualRpgCharacterSheet';
-const LOCAL_STORAGE_SHEET_DATA_KEY = 'characterData';
-const LOCAL_STORAGE_NOTE_DATA_KEY = 'notes';
+export const LOCAL_STORAGE_KEY_FRAGMENT_SEPARATOR = '.';
+export const LOCAL_STORAGE_BASE_KEY = 'VirtualRpgCharacterSheet';
+export const LOCAL_STORAGE_SHEET_DATA_KEY = 'characterData';
+export const LOCAL_STORAGE_NOTE_DATA_KEY = 'notes';
 
 type SaveState = 'idle' | 'saving' | 'saved';
 

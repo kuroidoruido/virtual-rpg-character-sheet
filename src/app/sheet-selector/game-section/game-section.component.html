@@ -1,0 +1,5 @@
+<h3>{{ game.gameName }}</h3>
+
+<div class="sheet-card-container">
+    <app-sheet-card *ngFor="let sheet of game.sheets" [game]="game" [sheet]="sheet"></app-sheet-card>
+</div>
