@@ -2,14 +2,24 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SheetWrapperComponent } from './sheet-wrapper.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+
 import { NoteZoneModule } from 'src/app/note-zone/note-zone.module';
-import { SaveButtonModule } from 'src/app/shared/save-button/save-button.module';
 import { SheetConfigPanelModule } from 'src/app/sheet-config-panel/sheet-config-panel.module';
+import { SaveButtonComponent } from './save-button/save-button.component';
+import { SheetWrapperComponent } from './sheet-wrapper.component';
 
 @NgModule({
-  declarations: [ SheetWrapperComponent ],
-  imports: [ CommonModule, SaveButtonModule, NoteZoneModule, SheetConfigPanelModule, DragDropModule ],
+  declarations: [ SheetWrapperComponent, SaveButtonComponent ],
+  imports: [
+    CommonModule, 
+    MatIconModule,
+    MatButtonModule,
+    NoteZoneModule,
+    SheetConfigPanelModule,
+    DragDropModule,
+  ],
   exports: [ SheetWrapperComponent ],
 })
 export class SheetWrapperModule { }
