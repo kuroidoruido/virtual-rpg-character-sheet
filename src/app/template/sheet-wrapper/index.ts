@@ -1,3 +1,3 @@
 export * from './sheet-wrapper.module';
 
-export * from './sheet-wrapper.component';
+export * from './sheet-wrapper/sheet-wrapper.component';

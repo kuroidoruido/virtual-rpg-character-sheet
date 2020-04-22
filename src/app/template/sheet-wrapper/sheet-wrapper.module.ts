@@ -8,7 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { NoteZoneModule } from 'src/app/note-zone/note-zone.module';
 import { SheetConfigPanelModule } from 'src/app/sheet-config-panel/sheet-config-panel.module';
 import { SaveButtonComponent } from './save-button/save-button.component';
-import { SheetWrapperComponent } from './sheet-wrapper.component';
+import { SheetWrapperComponent } from './sheet-wrapper/sheet-wrapper.component';
 
 @NgModule({
   declarations: [ SheetWrapperComponent, SaveButtonComponent ],

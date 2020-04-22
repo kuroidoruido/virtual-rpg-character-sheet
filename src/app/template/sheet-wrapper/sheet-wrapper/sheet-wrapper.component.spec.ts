@@ -4,7 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { NoteZoneModule } from 'src/app/note-zone/note-zone.module';
 import { SheetConfigPanelModule } from 'src/app/sheet-config-panel/sheet-config-panel.module';
-import { SaveButtonComponent } from './save-button/save-button.component';
+import { SaveButtonComponent } from '../save-button/save-button.component';
 import { SheetWrapperComponent } from './sheet-wrapper.component';
 
 describe('SheetWrapperComponent', () => {
