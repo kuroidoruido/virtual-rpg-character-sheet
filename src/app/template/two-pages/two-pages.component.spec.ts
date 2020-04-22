@@ -18,6 +18,21 @@ describe('TwoPagesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(TwoPagesComponent);
     component = fixture.componentInstance;
+    component.characterData = { values: { characterName: '' } };
+    component.sheetConfig = { 
+      gameId: 'gid', 
+      sheetId: 'sid',
+      pageConfig: {
+        pageFormat: 'A4',
+        pageWidth: 100,
+        pages: []
+      },
+      content: {
+        pageCount: 2, 
+        page1: [], 
+        page2: [],
+      },
+    };
     fixture.detectChanges();
   });
 

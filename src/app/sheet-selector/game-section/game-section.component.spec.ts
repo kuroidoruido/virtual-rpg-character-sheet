@@ -1,4 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
 
 import { GameSectionComponent } from './game-section.component';
 
@@ -8,7 +12,8 @@ describe('GameSectionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GameSectionComponent ]
+      declarations: [ GameSectionComponent ],
+      imports: [ RouterTestingModule, MatCardModule, MatChipsModule ],
     })
     .compileComponents();
   }));
@@ -16,6 +21,7 @@ describe('GameSectionComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(GameSectionComponent);
     component = fixture.componentInstance;
+    component.game = {gameId: 'id', gameName: 'name', sheets: []};
     fixture.detectChanges();
   });
 

@@ -16,6 +16,8 @@ describe('PlaceholderCheckboxGroupComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PlaceholderCheckboxGroupComponent);
     component = fixture.componentInstance;
+    component.config = {} as any;
+    component.characterData = { values: { characterName: '' } };
     fixture.detectChanges();
   });
 

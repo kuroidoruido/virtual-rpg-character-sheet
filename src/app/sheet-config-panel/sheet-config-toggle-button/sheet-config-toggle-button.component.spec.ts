@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SheetConfigToggleButtonComponent } from './sheet-config-toggle-button.component';
+import { MatIconModule } from '@angular/material/icon';
 
 describe('SheetConfigToggleButtonComponent', () => {
   let component: SheetConfigToggleButtonComponent;
@@ -8,7 +9,8 @@ describe('SheetConfigToggleButtonComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SheetConfigToggleButtonComponent ]
+      declarations: [ SheetConfigToggleButtonComponent ],
+      imports: [ MatIconModule ],
     })
     .compileComponents();
   }));

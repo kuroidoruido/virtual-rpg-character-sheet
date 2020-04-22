@@ -19,7 +19,7 @@ describe('PlaceholderCheckboxComponent', () => {
     fixture = TestBed.createComponent(PlaceholderCheckboxComponent);
     component = fixture.componentInstance;
     component.config = {} as any;
-    component.characterData = { values: {} };
+    component.characterData = { values: { characterName: '' } };
     fixture.detectChanges();
   });
 
