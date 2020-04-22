@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { SheetWrapperModule } from 'src/app/template/sheet-wrapper';
 import { TwoPagesModule } from 'src/app/template/two-pages';
 import { CthulhuV7FrClassiqueComponent } from './cthulhu-v7-fr-classique.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('CthulhuV7FrClassiqueComponent', () => {
   let component: CthulhuV7FrClassiqueComponent;
@@ -11,7 +12,7 @@ describe('CthulhuV7FrClassiqueComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ CthulhuV7FrClassiqueComponent ],
-      imports: [ SheetWrapperModule, TwoPagesModule ]
+      imports: [ RouterTestingModule, SheetWrapperModule, TwoPagesModule ]
     })
     .compileComponents();
   }));

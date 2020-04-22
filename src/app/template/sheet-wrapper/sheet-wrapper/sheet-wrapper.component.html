@@ -1,6 +1,7 @@
 <div class="sheet-note-wrapper">
     <div class="sheet-wrapper" #sheetWrapper [style.width]="sheetWrapperWidthPx$ | async">
         <ng-content></ng-content>
+        <app-home-button></app-home-button>
         <app-save-button (click)="save()"></app-save-button>
         <app-sheet-config-toggle-button></app-sheet-config-toggle-button>
     </div>
