@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
+import { produce } from 'immer';
 
 import { GAMES } from '../games';
-import { GameWithUserInfos } from '../game.model';
+import { GameWithUserInfos, SheetWithUserInfos } from '../game.model';
 import { LOCAL_STORAGE_SHEET_DATA_KEY, SaveService, LOCAL_STORAGE_KEY_FRAGMENT_SEPARATOR } from 'src/app/shared/save/save.service';
 
 interface UserSheetInfo {
@@ -24,9 +25,10 @@ export class GameSheetService {
   getGames(): GameWithUserInfos[] {
     const userSheetInfos = this.getUserSheetInfos();
     const games: GameWithUserInfos[] = this.gameList.map(
-      game => ({
-        ...game, 
-        sheets: game.sheets.map(sheet => ({ ...sheet, characters: [] })),
+      game => produce(game as GameWithUserInfos, draft => {
+        draft.sheets = draft.sheets.map(sheet => produce(sheet as SheetWithUserInfos, sheetDraft => {
+          sheetDraft.characters = [];
+        }));
       })
     );
 

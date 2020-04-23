@@ -5,6 +5,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips'; 
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list'; 
+import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { SheetSelectorPageComponent } from './sheet-selector-page/sheet-selector-page.component';
@@ -22,6 +23,7 @@ import { GameSectionComponent } from './game-section/game-section.component';
     MatChipsModule,
     MatDividerModule,
     MatListModule,
+    MatTabsModule,
     MatToolbarModule,
   ],
   exports: [ SheetSelectorPageComponent ],

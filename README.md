@@ -47,5 +47,4 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - optional orientation for input text (some character sheet have diagonal input text)
 - give user access to prettify raw data map (add a button in sheet config panel to access a simple array of all keys/values, maybe with edition)
 - checkbox (and checkbox group) can toggle between multiple style (for example: none, filled circle, cross)
-- sheet list page with multiple tabs: all sheets, own characters
 - home page with product presentation

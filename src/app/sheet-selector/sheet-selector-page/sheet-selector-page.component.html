@@ -1,9 +1,25 @@
 <mat-toolbar>RPG Character Sheet</mat-toolbar>
 
-<mat-action-list>
-    <ng-template ngFor let-game [ngForOf]="games" let-isLast="last">
-        <app-game-section mat-list-item [game]="game"></app-game-section>
-        <mat-divider *ngIf="!isLast" ></mat-divider>
-    </ng-template>    
-</mat-action-list>
+<mat-tab-group mat-align-tabs="center" [selectedIndex]="selectedTab">
+    <mat-tab>
+        <ng-template mat-tab-label>My Sheets<mat-chip class="tab-sheet-count-badge">{{ownGamesSheet.length}}</mat-chip></ng-template>
+        <mat-action-list>
+            <ng-template ngFor let-game [ngForOf]="ownGamesSheet" let-isLast="last">
+                <app-game-section mat-list-item [game]="game"></app-game-section>
+                <mat-divider *ngIf="!isLast" ></mat-divider>
+            </ng-template>    
+        </mat-action-list>
+    </mat-tab>
+    <mat-tab>
+        <ng-template mat-tab-label>All<mat-chip class="tab-sheet-count-badge">{{games.length}}</mat-chip></ng-template>
+        <mat-action-list>
+            <ng-template ngFor let-game [ngForOf]="games" let-isLast="last">
+                <app-game-section mat-list-item [game]="game"></app-game-section>
+                <mat-divider *ngIf="!isLast" ></mat-divider>
+            </ng-template>    
+        </mat-action-list>
+    </mat-tab>
+</mat-tab-group>
+
+
 

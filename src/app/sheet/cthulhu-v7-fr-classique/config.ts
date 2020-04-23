@@ -1,19 +1,20 @@
+import { produce } from 'immer';
+
 import { CharacterData } from 'src/app/model/character-data.model';
 import { NumberComputedPlaceholderConfig } from 'src/app/model/placeholder.model';
 import { TwoPageSheetConfig } from 'src/app/model/sheet-config.model';
 
 function difficulte(config: Omit<NumberComputedPlaceholderConfig, 'compute'>, suffix: string, divider: number, baseValueKey?: string): NumberComputedPlaceholderConfig {
   const key = baseValueKey || config.key.replace(suffix, '');
-  return {
-    ...config, 
-    compute: (data: CharacterData) => {
+  return produce(config as NumberComputedPlaceholderConfig, draft => {
+    draft.compute = (data: CharacterData) => {
       const baseValue = parseInt(data.values[key] as any);
       if (baseValue === undefined || isNaN(baseValue)) {
         return '';
       }
       return Math.floor(baseValue / divider);
-    },
-  };
+    };
+  });
 }
 
 function demi(config: Omit<NumberComputedPlaceholderConfig, 'compute'>, baseValueKey?: string): NumberComputedPlaceholderConfig {
