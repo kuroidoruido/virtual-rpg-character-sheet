@@ -39,7 +39,6 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
     - Cats La Mascarade
     - ...
 - can keep more than one character for one particular game for one user
-- character selector
 - a simple dice roller
 - a sheet builder assistant (because it's really boring to make it through json...)
 - insert image (character photo), should be save as Base64 to have no external files + resize/compress to be lightweight
