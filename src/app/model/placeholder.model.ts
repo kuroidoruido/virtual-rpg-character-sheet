@@ -1,6 +1,7 @@
 import { CharacterData, CharacterDataValue } from './character-data.model';
 
 type Percent = number;
+type Degree = number;
 
 export type PlaceholderType = 
     | 'text-input'
@@ -17,6 +18,7 @@ interface BasePlaceholderConfig {
     y: number;
     width: Percent;
     fontSize?: Percent;
+    rotate?: Degree;
 }
 
 export interface TextInputPlaceholderConfig extends BasePlaceholderConfig {

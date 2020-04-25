@@ -1,8 +1,5 @@
 <label
-    [style.left]="config.x+'%'" 
-    [style.top]="config.y+'%'" 
-    [style.width]="config.width+'%'"
-    [style.font-size]="config.fontSize ? (config.fontSize*100)+'%' : undefined"
+    [ngStyle]="config | placeholderStyle"
     [for]="config.key"
     >
     <input type="radio" [id]="config.key" [name]="config.group" [value]="config.key" 

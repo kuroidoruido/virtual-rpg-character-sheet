@@ -1,9 +1,6 @@
-<textarea
-    [style.left]="config.x+'%'" 
-    [style.top]="config.y+'%'" 
-    [style.width]="config.width+'%'"
+<textarea 
+    [ngStyle]="config | placeholderStyle"
     [style.height]="config.height+'%'"
-    [style.font-size]="config.fontSize ? (config.fontSize*100)+'%' : undefined"
     [name]="config.key"
     [(ngModel)]="characterData.values[config.key]"
     wrap="hard">

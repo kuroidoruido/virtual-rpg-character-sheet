@@ -42,7 +42,6 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - a simple dice roller
 - a sheet builder assistant (because it's really boring to make it through json...)
 - insert image (character photo), should be save as Base64 to have no external files + resize/compress to be lightweight
-- optional orientation for input text (some character sheet have diagonal input text)
 - give user access to prettify raw data map (add a button in sheet config panel to access a simple array of all keys/values, maybe with edition)
 - checkbox (and checkbox group) can toggle between multiple style (for example: none, filled circle, cross)
 - home page with product presentation

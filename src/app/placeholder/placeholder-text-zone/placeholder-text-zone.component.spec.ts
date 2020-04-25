@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
+import { PlaceholderStylePipe } from '../placeholder-style/placeholder-style.pipe';
 import { PlaceholderTextZoneComponent } from './placeholder-text-zone.component';
 
 describe('PlaceholderTextZoneComponent', () => {
@@ -9,7 +10,7 @@ describe('PlaceholderTextZoneComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlaceholderTextZoneComponent ],
+      declarations: [ PlaceholderTextZoneComponent, PlaceholderStylePipe ],
       imports: [ FormsModule ],
     })
     .compileComponents();

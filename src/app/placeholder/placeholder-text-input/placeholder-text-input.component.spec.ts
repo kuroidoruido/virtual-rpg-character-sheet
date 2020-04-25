@@ -1,7 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { PlaceholderTextInputComponent } from './placeholder-text-input.component';
-
 import { FormsModule } from '@angular/forms';
+
+import { PlaceholderStylePipe } from '../placeholder-style/placeholder-style.pipe';
+import { PlaceholderTextInputComponent } from './placeholder-text-input.component';
 
 describe('PlaceholderTextInputComponent', () => {
   let component: PlaceholderTextInputComponent;
@@ -9,7 +10,7 @@ describe('PlaceholderTextInputComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlaceholderTextInputComponent ],
+      declarations: [ PlaceholderTextInputComponent, PlaceholderStylePipe ],
       imports: [ FormsModule ],
     })
     .compileComponents();

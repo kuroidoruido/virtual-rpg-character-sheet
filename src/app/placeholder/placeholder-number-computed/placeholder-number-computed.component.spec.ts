@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
+import { PlaceholderStylePipe } from '../placeholder-style/placeholder-style.pipe';
 import { ComputePipe } from './compute.pipe';
 import { PlaceholderNumberComputedComponent } from './placeholder-number-computed.component';
 
@@ -10,7 +11,7 @@ describe('PlaceholderNumberComputedComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlaceholderNumberComputedComponent, ComputePipe ],
+      declarations: [ PlaceholderNumberComputedComponent, ComputePipe, PlaceholderStylePipe ],
       imports: [ FormsModule ],
     })
     .compileComponents();

@@ -1,8 +1,5 @@
 <div type="text"
-    [style.left]="config.x+'%'" 
-    [style.top]="config.y+'%'" 
-    [style.width]="config.width+'%'"
-    [style.font-size]="config.fontSize ? (config.fontSize*100)+'%' : undefined"
+    [ngStyle]="config | placeholderStyle"
     [id]="config.key">
     {{ characterData | compute:config }}
 </div>

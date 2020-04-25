@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 
+import { PlaceholderStylePipe } from '../placeholder-style/placeholder-style.pipe';
 import { PlaceholderCheckboxComponent } from './placeholder-checkbox.component';
 
 describe('PlaceholderCheckboxComponent', () => {
@@ -9,7 +10,7 @@ describe('PlaceholderCheckboxComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlaceholderCheckboxComponent ],
+      declarations: [ PlaceholderCheckboxComponent, PlaceholderStylePipe ],
       imports: [ MatCheckboxModule ],
     })
     .compileComponents();
