@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { CthulhuV7FrClassiqueComponent, CthulhuV7FrClassiqueModule } from 'src/app/sheet/cthulhu-v7/fr-classique';
 import { SheetSelectorPageComponent, SheetSelectorModule } from './sheet-selector';
 import { CthulhuV7FrClassiqueComponent, CthulhuV7FrClassiqueModule } from './sheet/cthulhu-v7-fr-classique';
 

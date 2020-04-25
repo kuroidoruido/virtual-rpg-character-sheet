@@ -31,6 +31,7 @@ export const config: TwoPageSheetConfig = {
   pageConfig: {
     pages: [ 'page-1.png', 'page-2.png' ],
     pageFormat: 'A4',
+    pageOrientation: 'portrait',
     pageWidth: 100
   },
   content: {

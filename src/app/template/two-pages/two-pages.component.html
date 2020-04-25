@@ -1,17 +1,22 @@
 <ng-template [ngIf]="sheetConfig">
-    <div class="pages" #pages [class.ratio-A4]="sheetConfig.pageConfig.pageFormat === 'A4'">
-        <div class="page" id="page-1">
-            <div class="page-input-container">
-                <ng-template ngFor let-config [ngForOf]="sheetConfig.content.page1" >
-                    <app-placeholder [config]="config" [characterData]="characterData"></app-placeholder>
-                </ng-template>        
+    
+    <div class="pages" [ngClass]="pageConfigService.ngClass(sheetConfig.pageConfig)" #pages>
+        <div class="page-wrapper">
+            <div class="page" id="page-1" [ngStyle]="pageConfigService.ngStyle(sheetConfig,1)">
+                <div class="page-input-container">
+                    <ng-template ngFor let-config [ngForOf]="sheetConfig.content.page1" >
+                        <app-placeholder [config]="config" [characterData]="characterData"></app-placeholder>
+                    </ng-template>        
+                </div>
             </div>
         </div>
-        <div class="page" id="page-2">
-            <div class="page-input-container">
-                <ng-template ngFor let-config [ngForOf]="sheetConfig.content.page2" >
-                    <app-placeholder [config]="config" [characterData]="characterData"></app-placeholder>
-                </ng-template>
+        <div class="page-wrapper">
+            <div class="page" id="page-2" [ngStyle]="pageConfigService.ngStyle(sheetConfig,2)">
+                <div class="page-input-container">
+                    <ng-template ngFor let-config [ngForOf]="sheetConfig.content.page2" >
+                        <app-placeholder [config]="config" [characterData]="characterData"></app-placeholder>
+                    </ng-template>
+                </div>
             </div>
         </div>
     </div>

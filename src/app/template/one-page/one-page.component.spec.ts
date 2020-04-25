@@ -24,6 +24,7 @@ describe('OnePageComponent', () => {
       sheetId: 'sid',
       pageConfig: {
         pageFormat: 'A4',
+        pageOrientation: 'portrait',
         pageWidth: 100,
         pages: []
       },

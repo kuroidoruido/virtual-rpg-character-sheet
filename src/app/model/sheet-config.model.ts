@@ -15,8 +15,13 @@ export interface TwoPageContent {
 
 export type SheetContent = OnePageContent | TwoPageContent;
 
+export type PageFormat = 'A4';
+
+export type PageOrientation = 'portrait' | 'landscape';
+
 export interface SheetDataConfig {
-    pageFormat: 'A4';// ! TODO fix ratio bug (ratio is not respected if this value is under 100)
+    pageFormat: PageFormat;
+    pageOrientation: PageOrientation;
     pageWidth: Percent;
     pages: string[];
 }

@@ -1,0 +1,15 @@
+@mixin setup-page-ratio($ratio, $orientation, $ratioWidthByHeight) {
+    .pages.ratio-#{$ratio}.orientation-#{$orientation} {
+        .page-wrapper {
+            width: 100%;
+            .page {
+                padding-top: $ratioWidthByHeight;
+            }
+        }
+    }
+}
+
+@mixin setup-all-page-ratio() {
+    @include setup-page-ratio('A4', 'portrait', 141.43%);
+    @include setup-page-ratio('A4', 'landscape', 70.71%);
+}
