@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { CthulhuV7FrClassiqueComponent, CthulhuV7FrClassiqueModule } from 'src/app/sheet/cthulhu-v7/fr-classique';
+import { NainsEtJardinFrComponent, NainsEtJardinFrModule } from 'src/app/sheet/nains-et-jardin/fr';
+
 import { SheetSelectorPageComponent, SheetSelectorModule } from './sheet-selector';
 
 
@@ -10,6 +12,7 @@ const routes: Routes = [
   
   // sheet pages
   { path: 'cthulhu-v7.fr-classique', component: CthulhuV7FrClassiqueComponent },
+  { path: 'nains-et-jardins.fr', component: NainsEtJardinFrComponent },
 ];
 
 @NgModule({
@@ -19,6 +22,7 @@ const routes: Routes = [
     SheetSelectorModule, 
     
     CthulhuV7FrClassiqueModule,
+    NainsEtJardinFrModule,
   ],
   exports: [RouterModule]
 })

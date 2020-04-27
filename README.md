@@ -34,7 +34,6 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - import/export feature
 - print mode (convert editable field as static field, make multiple page on column, make it fit in A4 pages)
 - more game sheet:
-    - Nain & Jardin
     - Billet Rouge
     - Cats La Mascarade
     - ...
