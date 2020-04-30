@@ -16,7 +16,7 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 
 ## What's working?
 
-- can play to Call of Cthulhu v7 with french classical sheet
+- can play to some games
 - can save (local storage = in your browser) your sheet state
 - have different placeholders: 
     - text (static, readonly)
@@ -28,6 +28,17 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - share link: will offer a way to make someone else our sheet (without server)
 - radio element (grouped) with differents visual shape (cross, circle, square) 
 
+## Supported games
+
+- Cats! La Mascarade
+    - FR Bastet sheet
+    - FR Cat sheet
+    - FR Cat 2 sheet
+    - FR Human sheet
+- Cthulhu v7:
+    - FR classical sheet
+- Nains & Jardins
+    - FR sheet
 ## What's next?
 
 - Save needed indicator (when data are changed and we have not saved yet)
