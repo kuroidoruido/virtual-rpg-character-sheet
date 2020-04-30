@@ -18,7 +18,7 @@ export class SheetSelectorPageComponent {
   games: GameWithUserInfos[];
   gamesSheetCount = 0;
   ownGamesSheet: GameWithUserInfos[];
-  OwnGamesSheetCount = 0;
+  ownGamesSheetCount = 0;
 
   constructor(gameSheetService: GameSheetService) {
     this.games = gameSheetService.getGames();
@@ -28,7 +28,7 @@ export class SheetSelectorPageComponent {
         .map(game => produce(game, draft => {
           draft.sheets = draft.sheets.filter(sheet => sheet.characters.length > 0);
         }));
-    this.OwnGamesSheetCount = this.ownGamesSheet.reduce((count, game) => count + game.sheets.length, 0);
+    this.ownGamesSheetCount = this.ownGamesSheet.reduce((count, game) => count + game.sheets.length, 0);
     if(this.ownGamesSheet === undefined || this.ownGamesSheet.length === 0) {
       this.selectedTab = TAB_ALL_SHEETS;
     }

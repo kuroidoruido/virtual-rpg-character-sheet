@@ -2,7 +2,7 @@
 
 <mat-tab-group mat-align-tabs="center" [selectedIndex]="selectedTab">
     <mat-tab>
-        <ng-template mat-tab-label>My Sheets<div class="tab-sheet-count-badge">{{ownGamesSheet.length}}</div></ng-template>
+        <ng-template mat-tab-label>My Sheets<div class="tab-sheet-count-badge">{{ownGamesSheetCount}}</div></ng-template>
         <mat-action-list>
             <ng-template ngFor let-game [ngForOf]="ownGamesSheet" let-isLast="last">
                 <app-game-section mat-list-item [game]="game"></app-game-section>
@@ -11,7 +11,7 @@
         </mat-action-list>
     </mat-tab>
     <mat-tab>
-        <ng-template mat-tab-label>All<div class="tab-sheet-count-badge">{{games.length}}</div></ng-template>
+        <ng-template mat-tab-label>All<div class="tab-sheet-count-badge">{{gamesSheetCount}}</div></ng-template>
         <mat-action-list>
             <ng-template ngFor let-game [ngForOf]="games" let-isLast="last">
                 <app-game-section mat-list-item [game]="game"></app-game-section>
