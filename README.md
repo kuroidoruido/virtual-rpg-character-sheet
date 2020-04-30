@@ -46,7 +46,6 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - print mode (convert editable field as static field, make multiple page on column, make it fit in A4 pages)
 - more game sheet:
     - Billet Rouge
-    - Cats La Mascarade
     - ...
 - can keep more than one character for one particular game for one user
 - a simple dice roller
@@ -55,3 +54,4 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - give user access to prettify raw data map (add a button in sheet config panel to access a simple array of all keys/values, maybe with edition)
 - checkbox (and checkbox group) can toggle between multiple style (for example: none, filled circle, cross)
 - home page with product presentation
+- lazyload all pages
