@@ -9,6 +9,7 @@ export interface Game {
 export interface Sheet {
     sheetId: string;
     sheetName: string;
+    moduleName: string;
     imgAsset: string;
 }
 

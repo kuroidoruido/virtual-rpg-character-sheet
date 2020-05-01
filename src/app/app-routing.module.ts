@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule, Routes } from '@angular/router';
 
+import { GAMES } from './games';
+import { Game } from './model/game.model';
+
 function sheetRoute(gameId: string, sheetId: string, moduleName: string): Route {
   return {
     path: `${gameId}.${sheetId}`,
@@ -8,16 +11,21 @@ function sheetRoute(gameId: string, sheetId: string, moduleName: string): Route 
   };
 }
 
+function generateSheetPages(games: Game[]): Routes {
+  const sheetRoutes = [];
+  for(const game of games) {
+    for(const sheet of game.sheets) {
+      sheetRoutes.push(sheetRoute(game.gameId, sheet.sheetId, sheet.moduleName));
+    }
+  }
+  return sheetRoutes;
+}
+
 const routes: Routes = [
   { path: '', pathMatch: 'full', loadChildren: () => import('./sheet-selector/sheet-selector.module').then(mod => mod.SheetSelectorModule) },
   
   // sheet pages
-  sheetRoute('cats-la-mascarade', 'fr-v1-bastet', 'FrV1BastetModule'),
-  sheetRoute('cats-la-mascarade', 'fr-v1-chat', 'FrV1ChatModule'),
-  sheetRoute('cats-la-mascarade', 'fr-v1-chat2', 'FrV1Chat2Module'),
-  sheetRoute('cats-la-mascarade', 'fr-v1-humain', 'FrV1HumainModule'),
-  sheetRoute('cthulhu-v7', 'fr-classique', 'CthulhuV7FrClassiqueModule'),
-  sheetRoute('nains-et-jardins', 'fr', 'NainsEtJardinFrModule'),
+  ...generateSheetPages(GAMES),
 ];
 
 @NgModule({

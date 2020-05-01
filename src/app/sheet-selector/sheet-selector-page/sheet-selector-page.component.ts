@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { produce } from 'immer';
 
 import { GameSheetService } from '../game-sheet-service/game-sheet.service';
-import { GameWithUserInfos } from '../game.model';
+import { GameWithUserInfos } from 'src/app/model/game.model';
 
 const TAB_OWN_GAME_SHEET = 0;
 const TAB_ALL_SHEETS = 1;

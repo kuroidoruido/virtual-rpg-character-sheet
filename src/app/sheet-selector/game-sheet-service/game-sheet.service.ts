@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { produce } from 'immer';
 
-import { GAMES } from '../games';
-import { GameWithUserInfos, SheetWithUserInfos } from '../game.model';
+import { GAMES } from 'src/app/games';
+import { GameWithUserInfos, SheetWithUserInfos } from 'src/app/model/game.model';
 import { LOCAL_STORAGE_SHEET_DATA_KEY, SaveService, LOCAL_STORAGE_KEY_FRAGMENT_SEPARATOR } from 'src/app/shared/save/save.service';
 
 interface UserSheetInfo {

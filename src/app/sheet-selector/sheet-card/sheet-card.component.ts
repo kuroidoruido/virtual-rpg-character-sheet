@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-
-import { SheetWithUserInfos, GameWithUserInfos, Character } from '../game.model';
 import { Router } from '@angular/router';
+
+import { SheetWithUserInfos, GameWithUserInfos, Character } from 'src/app/model/game.model';
 
 @Component({
   selector: 'app-sheet-card',

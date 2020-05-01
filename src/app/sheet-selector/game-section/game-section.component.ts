@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { GameWithUserInfos } from '../game.model';
+import { GameWithUserInfos } from 'src/app/model/game.model';
 
 @Component({
   selector: 'app-game-section',

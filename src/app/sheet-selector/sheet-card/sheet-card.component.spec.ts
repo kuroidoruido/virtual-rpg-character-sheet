@@ -21,7 +21,7 @@ describe('SheetCardComponent', () => {
     fixture = TestBed.createComponent(SheetCardComponent);
     component = fixture.componentInstance;
     component.game = { gameId: 'id', gameName: 'name', sheets: [] };
-    component.sheet = { sheetId: 'sheet-id', sheetName: 'sheet-name', imgAsset: 'img', characters: [] };
+    component.sheet = { sheetId: 'sheet-id', sheetName: 'sheet-name', moduleName: 'SheetName', imgAsset: 'img', characters: [] };
     fixture.detectChanges();
   });
 
