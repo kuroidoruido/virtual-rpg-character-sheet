@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips'; 
@@ -12,12 +13,13 @@ import { SheetSelectorPageComponent } from './sheet-selector-page/sheet-selector
 import { SheetCardComponent } from './sheet-card/sheet-card.component';
 import { GameSectionComponent } from './game-section/game-section.component';
 
-
+const routes: Routes = [{ path: '', component: SheetSelectorPageComponent }];
 
 @NgModule({
   declarations: [SheetSelectorPageComponent, SheetCardComponent, GameSectionComponent],
   imports: [
     CommonModule,
+    RouterModule.forChild(routes),
 
     MatCardModule,
     MatChipsModule,
@@ -26,6 +28,5 @@ import { GameSectionComponent } from './game-section/game-section.component';
     MatTabsModule,
     MatToolbarModule,
   ],
-  exports: [ SheetSelectorPageComponent ],
 })
 export class SheetSelectorModule { }
