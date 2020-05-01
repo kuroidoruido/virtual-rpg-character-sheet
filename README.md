@@ -39,6 +39,7 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
     - FR classical sheet
 - Nains & Jardins
     - FR sheet
+
 ## What's next?
 
 - Save needed indicator (when data are changed and we have not saved yet)
@@ -54,3 +55,4 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - give user access to prettify raw data map (add a button in sheet config panel to access a simple array of all keys/values, maybe with edition)
 - checkbox (and checkbox group) can toggle between multiple style (for example: none, filled circle, cross)
 - home page with product presentation
+- i18n support (starting with english and french)
