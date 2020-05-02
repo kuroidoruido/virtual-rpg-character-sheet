@@ -1,4 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 import { DiceRollerComponent } from './dice-roller.component';
 
@@ -8,7 +12,8 @@ describe('DiceRollerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DiceRollerComponent ]
+      declarations: [ DiceRollerComponent ],
+      imports: [ NoopAnimationsModule, MatButtonModule, MatFormFieldModule, MatInputModule ],
     })
     .compileComponents();
   }));

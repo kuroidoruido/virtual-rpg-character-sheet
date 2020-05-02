@@ -12,3 +12,23 @@ body {
         font-size: 0.65rem;
     }
 }
+
+@keyframes rotating {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes squashHeightOut {
+    from {
+        opacity: 1;
+        height: initial;
+    }
+    to {
+        opacity: 0;
+        height: 0;
+    }
+}

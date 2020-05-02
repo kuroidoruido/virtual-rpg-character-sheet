@@ -1,0 +1,28 @@
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
+import { RawEditorSaveButtonComponent } from './raw-editor-save-button.component';
+
+describe('RawEditorSaveButtonComponent', () => {
+  let component: RawEditorSaveButtonComponent;
+  let fixture: ComponentFixture<RawEditorSaveButtonComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ RawEditorSaveButtonComponent ],
+      imports: [ MatButtonModule, MatIconModule ],
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(RawEditorSaveButtonComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

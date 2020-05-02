@@ -20,7 +20,7 @@ export class SheetConfigPanelComponent {
 
   constructor(
     public sheetConfigPanelService: SheetConfigStateService, 
-    private sheetStateService: SheetStateService, 
+    public sheetStateService: SheetStateService, 
     private shareLinkService: ShareLinkService, 
     private snackBar: MatSnackBar) { }
 
@@ -38,7 +38,7 @@ export class SheetConfigPanelComponent {
       const copied = document.execCommand('copy');
 
       if (copied) {
-        this.snackBar.open('Share link copied in clipboard',undefined, { duration: 2000 });
+        this.snackBar.open('Share link copied in clipboard', undefined, { duration: 2000 });
       }
     }
   }

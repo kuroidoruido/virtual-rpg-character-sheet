@@ -23,6 +23,7 @@ function generateSheetPages(games: Game[]): Routes {
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', loadChildren: () => import('./sheet-selector/sheet-selector.module').then(mod => mod.SheetSelectorModule) },
+  { path: 'raw-editor', loadChildren: () => import('./raw-sheet-data-editor/raw-sheet-data-editor.module').then(mod => mod.RawSheetDataEditorModule) },
   
   // sheet pages
   ...generateSheetPages(GAMES),

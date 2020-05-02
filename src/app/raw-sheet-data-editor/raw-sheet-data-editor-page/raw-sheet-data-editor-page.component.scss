@@ -1,0 +1,53 @@
+form {
+    width: fit-content;
+    margin: 2rem auto;
+    
+    table {
+        margin: auto;
+
+        tr {
+            &.dropping {
+                animation: squashHeightOut 250ms normal linear;
+            }
+            th {
+                &:not(.mat-column-delete) {
+                    padding-left: 5%;
+                }
+                &.mat-column-delete {
+                    padding-left: 1em;
+                }
+            }
+            td {
+                &:not(.mat-column-delete) {
+                    width: 20rem;
+                    input {
+                        width: 90%;
+    
+                        &.data-value {
+                            margin-left: 5%;
+                        }
+                    }
+                }
+
+                &.mat-column-delete {
+                    padding-left: 0.5rem;
+                }                
+            }
+        }
+    }
+
+    .save-button-wrapper {
+        width: 100%;
+        background-color: white;
+        position: sticky;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        border-top: 1px rgba(0, 0, 0, 0.12) solid;
+        padding: 0.5rem 0;
+
+        .save-button {
+            width: 30%;
+        }
+    }
+}

@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { MatIconModule } from '@angular/material/icon';
 
+import { DiceRollerModule } from 'src/app/dice-roller/dice-roller.module';
 import { NoteZoneModule } from 'src/app/note-zone/note-zone.module';
 import { SheetConfigPanelModule } from 'src/app/sheet-config-panel/sheet-config-panel.module';
 import { HomeButtonComponent } from '../home-button/home-button.component';
@@ -16,7 +17,7 @@ describe('SheetWrapperComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ SheetWrapperComponent, HomeButtonComponent, SaveButtonComponent ],
-      imports: [ RouterTestingModule, MatIconModule, NoteZoneModule, SheetConfigPanelModule ],
+      imports: [ DiceRollerModule, RouterTestingModule, MatIconModule, NoteZoneModule, SheetConfigPanelModule ],
     })
     .compileComponents();
   }));

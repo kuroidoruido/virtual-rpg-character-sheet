@@ -1,0 +1,14 @@
+button {
+    display: block;
+    width: 100%;
+    &.saving {
+        color: blue;
+
+        mat-icon {
+            animation: rotating 2s infinite linear;
+        }
+    }
+    &.saved {
+        color: green;
+    }
+}

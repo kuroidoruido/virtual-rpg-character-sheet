@@ -7,7 +7,7 @@ import { CharacterData } from '../../model/character-data.model';
 export class ShareLinkService {
 
   constructor() { }
-
+ 
   generateShareLink(characterData: CharacterData, currentUrl = window.location.href || ''): string | undefined {
     const strData = JSON.stringify(characterData);
     if(strData !== undefined) {
