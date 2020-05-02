@@ -56,3 +56,9 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - checkbox (and checkbox group) can toggle between multiple style (for example: none, filled circle, cross)
 - home page with product presentation
 - i18n support (starting with english and french)
+
+# LICENSE
+
+All this project is under GNU General Public Licence 3.0 (see [LICENSE](https://github.com/kuroidoruido/virtual-rpg-character-sheet/blob/master/LICENSE) file) except character sheets that are under them authors copyright.
+
+If you are one of the author of these character sheets, you can contact me for any question.
