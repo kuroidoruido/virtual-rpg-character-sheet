@@ -10,16 +10,20 @@ import { SheetConfigPanelModule } from 'src/app/sheet-config-panel/sheet-config-
 import { SaveButtonComponent } from './save-button/save-button.component';
 import { SheetWrapperComponent } from './sheet-wrapper/sheet-wrapper.component';
 import { HomeButtonComponent } from './home-button/home-button.component';
+import { DiceRollerModule } from 'src/app/dice-roller/dice-roller.module';
 
 @NgModule({
   declarations: [ SheetWrapperComponent, SaveButtonComponent, HomeButtonComponent ],
   imports: [
     CommonModule,
+    DragDropModule,
+
     MatIconModule,
     MatButtonModule,
+    
     NoteZoneModule,
     SheetConfigPanelModule,
-    DragDropModule,
+    DiceRollerModule,
   ],
   exports: [ SheetWrapperComponent ],
 })

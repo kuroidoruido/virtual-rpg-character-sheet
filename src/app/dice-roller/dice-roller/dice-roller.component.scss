@@ -1,0 +1,44 @@
+:host {
+    display: block;
+    background-color: var(--color-floating-button-background);
+
+    .dice-roller {
+        display: flex;
+        align-items: baseline;
+        padding: 0.5rem 0.5rem 0 0.5rem;
+
+        mat-form-field {
+            width: 2rem;
+            max-height: 1.5rem;
+
+            ::ng-deep {
+                .mat-form-field-infix  {
+                    border-top: 0;
+                }
+                .mat-form-field-label-wrapper {
+                    padding-top: 0;
+                    display: none;
+                }
+            }
+
+            &.dice-count {
+                margin-right: 0.5rem;
+            }
+
+            &.face-count {
+                margin-left: 0.5rem;
+            }
+        }
+
+        button {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .result {
+            background-color: var(--color-floating-button-background);
+            padding: 0.5rem;
+            border-radius: 4px;
+        }
+    }
+}

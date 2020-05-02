@@ -3,7 +3,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: rgba(255,255,255,0.5);
+        background-color: var(--color-floating-button-background);
         padding-left: 0.4em;
         padding-right: 0.4em;
         min-width: fit-content;

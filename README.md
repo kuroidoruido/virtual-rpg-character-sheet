@@ -23,10 +23,11 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
     - checkbox/checkbox bar (for example for Call of Cthulhu v7 we can use this for life point)
     - textarea (for multiline text input)
     - computed input (for value that depends from other ones)
+- a simple dice roller
 - Save with Ctrl+Shift+s
 - free note zone (for taking notes during a session)
 - share link: will offer a way to make someone else our sheet (without server)
-- radio element (grouped) with differents visual shape (cross, circle, square) 
+- radio element (grouped) with differents visual shape (cross, circle, square)
 
 ## Supported games
 
@@ -49,7 +50,6 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
     - Billet Rouge
     - ...
 - can keep more than one character for one particular game for one user
-- a simple dice roller
 - a sheet builder assistant (because it's really boring to make it through json...)
 - insert image (character photo), should be save as Base64 to have no external files + resize/compress to be lightweight
 - give user access to prettify raw data map (add a button in sheet config panel to access a simple array of all keys/values, maybe with edition)

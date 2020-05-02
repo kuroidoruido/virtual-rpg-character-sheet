@@ -16,10 +16,12 @@ $color-primary: mat-color($custom-primary);
 $color-accent: mat-color($custom-accent);
 $color-warn: mat-color($custom-warn);
 $color-background: mat-color($custom-background, 300);
+$color-floating-button-background: rgba(255,255,255,0.5);
 
 :root {
     --color-primary: #{$color-primary};
     --color-accent: #{$color-accent};
     --color-warn: #{$color-warn};
     --color-background: #{$color-background};
+    --color-floating-button-background: #{$color-floating-button-background};
 }

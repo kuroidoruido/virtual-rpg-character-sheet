@@ -1,0 +1,4 @@
+<div class="wrapper">
+    <app-dice-roller *ngIf="showRoller"></app-dice-roller>
+    <app-dice-roller-button (toggleShowRoller)="showRoller=!showRoller"></app-dice-roller-button>
+</div>
