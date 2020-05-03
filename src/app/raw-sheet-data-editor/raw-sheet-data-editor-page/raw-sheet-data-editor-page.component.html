@@ -1,4 +1,10 @@
-<form *ngIf="keys$ | async as keys" [formGroup]="form" (ngSubmit)="onSubmit()" class="mat-elevation-z8">
+<form *ngIf="filteredKeys$ | async as keys" [formGroup]="form" (ngSubmit)="onSubmit()" class="mat-elevation-z8">
+
+    <mat-form-field class="filter-keys-field">
+        <mat-label>Filter keys:</mat-label>
+        <input matInput placeholder="type key fragment you want to see" (keyup)="filterChange($event)"/>
+    </mat-form-field>
+
     <table mat-table [dataSource]="keys">
 
         <ng-container matColumnDef="key">
@@ -30,6 +36,11 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;" [class.dropping]="droppingKeys.includes(row)"></tr>
         
     </table>
+
+    <div class="no-data" *ngIf="keys.length === 0">
+        No data to show.
+    </div>
+
     <div class="save-button-wrapper">
         <app-raw-editor-save-button class="save-button"></app-raw-editor-save-button>
     </div>

@@ -1,7 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { produce } from 'immer';
-import { Observable, combineLatest, ReplaySubject, Subject, Subscription } from 'rxjs';
+import { Observable, combineLatest, ReplaySubject, Subject, Subscription, BehaviorSubject } from 'rxjs';
 import { filter, map, tap, shareReplay, first, delay } from 'rxjs/operators';
 
 import { SaveService } from 'src/app/shared/save/save.service';
@@ -17,6 +17,8 @@ export class RawSheetDataEditorPageComponent implements OnDestroy {
   displayedColumns: string[] = ['key', 'value', 'delete'];
   form = new FormGroup({});
   keys$: Observable<string[]>;
+  filteredKeys$: Observable<string[]>;
+  keysFilter$ = new BehaviorSubject<string>('');
     
   private gameSheetId$: Observable<string>;
   private characterData$: Observable<CharacterData>;
@@ -50,6 +52,9 @@ export class RawSheetDataEditorPageComponent implements OnDestroy {
     );
     this.keys$ = combineLatest(rawKeyList$, this.dropKeys$).pipe(
       map(([rawKeyList, dropKeys]) => rawKeyList.filter(k => !dropKeys.includes(k))),
+    );
+    this.filteredKeys$ = combineLatest(this.keys$, this.keysFilter$).pipe(
+      map(([keys, keyFilter]) => keyFilter ? keys.filter(k => k.includes(keyFilter)) : keys),
     );
   }
 
@@ -101,5 +106,9 @@ export class RawSheetDataEditorPageComponent implements OnDestroy {
         })
       )
     );
+  }
+
+  filterChange(event: any) {
+    this.keysFilter$.next(event.target.value);
   }
 }

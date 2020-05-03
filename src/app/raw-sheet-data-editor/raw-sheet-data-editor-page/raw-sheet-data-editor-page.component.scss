@@ -2,8 +2,14 @@ form {
     width: fit-content;
     margin: 2rem auto;
     
+    .filter-keys-field {
+        width: 80%;
+        margin: 2rem 10% 1rem 10%;
+    }
+
     table {
         margin: auto;
+        min-width: 46rem;
 
         tr {
             &.dropping {
@@ -12,6 +18,7 @@ form {
             th {
                 &:not(.mat-column-delete) {
                     padding-left: 5%;
+                    width: 20rem;
                 }
                 &.mat-column-delete {
                     padding-left: 1em;
@@ -34,6 +41,12 @@ form {
                 }                
             }
         }
+    }
+
+    .no-data {
+        min-width: 46rem;
+        text-align: center;
+        padding: 3rem 1rem;
     }
 
     .save-button-wrapper {
