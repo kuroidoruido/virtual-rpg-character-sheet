@@ -11,7 +11,7 @@
                 </mat-form-field>
             </form>
         </ng-template>
-        <a mat-stroked-button target="_blank" [href]="'/raw-editor/'+sheetStateService.currentGameSheetId">Open Advance Editor</a>
+        <a mat-stroked-button target="_blank" [routerLink]="['/raw-editor/'+sheetStateService.currentGameSheetId]">Open Advance Editor</a>
     </div>
     <app-sheet-config-toggle-button [forceShow]="true"></app-sheet-config-toggle-button>
 </ng-template>
