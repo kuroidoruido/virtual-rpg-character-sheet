@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { SheetWrapperModule } from 'src/app/template/sheet-wrapper';
 import { OnePageModule } from 'src/app/template/one-page';
+import { FakeTranslateModule } from 'src/app/test-helpers/translate.spec';
 import { NainsEtJardinFrComponent } from './nains-et-jardin-fr.component';
 
 describe('NainsEtJardinFrComponent', () => {
@@ -12,7 +13,7 @@ describe('NainsEtJardinFrComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ NainsEtJardinFrComponent ],
-      imports: [ RouterTestingModule, SheetWrapperModule, OnePageModule ]
+      imports: [ FakeTranslateModule, RouterTestingModule, SheetWrapperModule, OnePageModule ]
     })
     .compileComponents();
   }));

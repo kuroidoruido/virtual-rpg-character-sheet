@@ -11,9 +11,13 @@
     </mat-card-content>
     <mat-card-footer>
         <mat-chip-list aria-label="Character selection">
-            <mat-chip *ngFor="let character of sheet.characters" color="primary" selected (click)="openCharacterSheet(character)">{{ character.name }}</mat-chip>
+            <mat-chip *ngFor="let character of sheet.characters" color="primary" selected (click)="openCharacterSheet(character)">
+                {{ character.name }}
+            </mat-chip>
             <ng-template [ngIf]="sheet.characters.length === 0">
-                <mat-chip trailingIcon="add" (click)="createCharacterSheet()">New character</mat-chip>
+                <mat-chip trailingIcon="add" (click)="createCharacterSheet()">
+                    {{ 'sheet-selector.sheet-card.create' | translate }}
+                </mat-chip>
             </ng-template>
           </mat-chip-list>
     </mat-card-footer>

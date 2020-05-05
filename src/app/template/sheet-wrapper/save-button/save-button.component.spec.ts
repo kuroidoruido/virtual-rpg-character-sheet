@@ -1,7 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
+import { FakeTranslateModule } from 'src/app/test-helpers/translate.spec';
 import { SaveButtonComponent } from './save-button.component';
 
 describe('SaveButtonComponent', () => {
@@ -11,7 +13,7 @@ describe('SaveButtonComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ SaveButtonComponent ],
-      imports: [ MatIconModule ]
+      imports: [ FakeTranslateModule, MatButtonModule, MatIconModule ]
     })
     .compileComponents();
   }));

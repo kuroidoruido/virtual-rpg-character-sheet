@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field'; 
@@ -11,7 +12,14 @@ import { DiceRollerContainerComponent } from './dice-roller-container/dice-rolle
 
 @NgModule({
   declarations: [ DiceRollerButtonComponent, DiceRollerComponent, DiceRollerContainerComponent ],
-  imports: [ CommonModule, MatButtonModule, MatFormFieldModule, MatInputModule ],
+  imports: [
+    CommonModule,
+    TranslateModule.forChild(),
+
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+  ],
   exports: [ DiceRollerContainerComponent ],
 })
 export class DiceRollerModule { }

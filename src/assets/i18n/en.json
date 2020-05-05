@@ -1,0 +1,50 @@
+{
+    "dice-roller": {
+        "dice": "dice",
+        "dices": "dices",
+        "roll": "Roll"
+    },
+    "raw-editor": {
+        "filter-input": {
+            "hint": "Type key fragment you want to see",
+            "label": "Filter keys"
+        },
+        "save-button": {
+            "save": "Save",
+            "saved": "Saved",
+            "saving": "Saving..."
+        },
+        "table": {
+            "heading": {
+                "delete": "Delete",
+                "key": "Key",
+                "value": "Value"
+            },
+            "no-data": "No data to show."
+        }
+    },
+    "sheet-config-panel": {
+        "raw-editor-button": "Open advance editor",
+        "share-link": {
+            "button": "Get share link",
+            "hint": "This link will give a copy of your current character sheet.",
+            "label": "Share link"
+        }
+    },
+    "sheet-selector": {
+        "sheet-card": {
+            "create": "New character"
+        },
+        "tabs": {
+            "all": "All sheets",
+            "my-sheets": "My sheets"
+        }
+    },
+    "sheet": {
+        "save-button": {
+            "save": "Save",
+            "saved": "Saved",
+            "saving": "Saving..."
+        }
+    }
+}

@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { SheetWrapperModule } from 'src/app/template/sheet-wrapper';
 import { TwoPagesModule } from 'src/app/template/two-pages';
+import { FakeTranslateModule } from 'src/app/test-helpers/translate.spec';
 import { FrV1Chat2Component } from './fr-v1-chat2.component';
 
 describe('FrV1Chat2Component', () => {
@@ -12,7 +13,7 @@ describe('FrV1Chat2Component', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ FrV1Chat2Component ],
-      imports: [ RouterTestingModule, SheetWrapperModule, TwoPagesModule ]
+      imports: [ FakeTranslateModule, RouterTestingModule, SheetWrapperModule, TwoPagesModule ]
     })
     .compileComponents();
   }));

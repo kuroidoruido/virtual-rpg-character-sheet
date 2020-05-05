@@ -1,9 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
-
-import { SheetCardComponent } from './sheet-card.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
+
+import { FakeTranslateModule } from 'src/app/test-helpers/translate.spec';
+import { SheetCardComponent } from './sheet-card.component';
 
 describe('SheetCardComponent', () => {
   let component: SheetCardComponent;
@@ -12,7 +13,7 @@ describe('SheetCardComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ SheetCardComponent ],
-      imports: [ RouterTestingModule, MatCardModule, MatChipsModule ],
+      imports: [ FakeTranslateModule, RouterTestingModule, MatCardModule, MatChipsModule ],
     })
     .compileComponents();
   }));

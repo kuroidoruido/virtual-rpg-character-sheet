@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { DiceRollerModule } from 'src/app/dice-roller/dice-roller.module';
 import { NoteZoneModule } from 'src/app/note-zone/note-zone.module';
 import { SheetConfigPanelModule } from 'src/app/sheet-config-panel/sheet-config-panel.module';
+import { FakeTranslateModule } from 'src/app/test-helpers/translate.spec';
 import { HomeButtonComponent } from '../home-button/home-button.component';
 import { SaveButtonComponent } from '../save-button/save-button.component';
 import { SheetWrapperComponent } from './sheet-wrapper.component';
@@ -17,7 +18,7 @@ describe('SheetWrapperComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ SheetWrapperComponent, HomeButtonComponent, SaveButtonComponent ],
-      imports: [ DiceRollerModule, RouterTestingModule, MatIconModule, NoteZoneModule, SheetConfigPanelModule ],
+      imports: [ FakeTranslateModule, DiceRollerModule, RouterTestingModule, MatIconModule, NoteZoneModule, SheetConfigPanelModule ],
     })
     .compileComponents();
   }));

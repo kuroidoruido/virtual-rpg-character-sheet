@@ -4,6 +4,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 
+import { FakeTranslateModule } from 'src/app/test-helpers/translate.spec';
 import { DiceRollerComponent } from './dice-roller.component';
 
 describe('DiceRollerComponent', () => {
@@ -13,7 +14,7 @@ describe('DiceRollerComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ DiceRollerComponent ],
-      imports: [ NoopAnimationsModule, MatButtonModule, MatFormFieldModule, MatInputModule ],
+      imports: [ FakeTranslateModule, NoopAnimationsModule, MatButtonModule, MatFormFieldModule, MatInputModule ],
     })
     .compileComponents();
   }));

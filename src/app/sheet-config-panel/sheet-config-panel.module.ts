@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,6 +18,7 @@ import { SheetConfigToggleButtonComponent } from './sheet-config-toggle-button/s
     CommonModule,
     FormsModule,
     RouterModule.forChild([]),
+    TranslateModule.forChild(),
 
     MatButtonModule,
     MatIconModule,

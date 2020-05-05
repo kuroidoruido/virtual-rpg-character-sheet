@@ -1,17 +1,15 @@
-import { Component, AfterViewChecked } from '@angular/core';
-
+import { Component } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewChecked {
-  // @ViewChild('pages', { static: true }) pagesWrapperElement: any;
+export class AppComponent {
 
-  ngAfterViewChecked() {
-    // if(this.pagesWrapperElement !== undefined && this.pagesWrapperElement.nativeElement !== undefined) {
-    //   this.pagesWrapperElement.nativeElement.style.setProperty('--pageWidth', `${ this.sheetData.pageConfig.pageWidth / 2 }%`);
-    // }
+  constructor(translate: TranslateService) {
+    const browserCurrentLanguage = navigator && navigator.language;
+    translate.use(browserCurrentLanguage || 'en');
   }
 }

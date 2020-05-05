@@ -1,28 +1,29 @@
 <form *ngIf="filteredKeys$ | async as keys" [formGroup]="form" (ngSubmit)="onSubmit()" class="mat-elevation-z8">
 
     <mat-form-field class="filter-keys-field">
-        <mat-label>Filter keys:</mat-label>
-        <input matInput placeholder="type key fragment you want to see" (keyup)="filterChange($event)"/>
+        <mat-label>{{ 'raw-editor.filter-input.label' | translate }}</mat-label>
+        <input matInput (keyup)="filterChange($event)"/>
+        <mat-hint align="start"><strong>{{ 'raw-editor.filter-input.hint' | translate }}</strong></mat-hint>
     </mat-form-field>
 
     <table mat-table [dataSource]="keys">
 
         <ng-container matColumnDef="key">
-            <th mat-header-cell *matHeaderCellDef> Key </th>
+            <th mat-header-cell *matHeaderCellDef> {{ 'raw-editor.table.heading.key' | translate }} </th>
             <td mat-cell *matCellDef="let element">
                 <input matInput class="data-key" [formControlName]="element+'_key'" />
             </td>
         </ng-container>
 
         <ng-container matColumnDef="value">
-            <th mat-header-cell *matHeaderCellDef> Value </th>
+            <th mat-header-cell *matHeaderCellDef> {{ 'raw-editor.table.heading.value' | translate }} </th>
             <td mat-cell *matCellDef="let element">
                 <input matInput class="data-value" [formControlName]="element+'_value'" />
             </td>
         </ng-container>
 
         <ng-container matColumnDef="delete">
-            <th mat-header-cell *matHeaderCellDef> Delete </th>
+            <th mat-header-cell *matHeaderCellDef> {{ 'raw-editor.table.heading.delete' | translate }} </th>
             <td mat-cell *matCellDef="let element">
                 <ng-template [ngIf]="element !== 'characterName'">
                     <button mat-icon-button color="warn" (click)="deleteLine(element)">
@@ -38,7 +39,7 @@
     </table>
 
     <div class="no-data" *ngIf="keys.length === 0">
-        No data to show.
+        {{ 'raw-editor.table.no-data' | translate }}
     </div>
 
     <div class="save-button-wrapper">

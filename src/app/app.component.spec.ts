@@ -1,12 +1,14 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+
+import { FakeTranslateModule } from 'src/app/test-helpers/translate.spec';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        FakeTranslateModule, RouterTestingModule
       ],
       declarations: [
         AppComponent

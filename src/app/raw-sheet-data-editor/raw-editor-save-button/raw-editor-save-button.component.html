@@ -3,20 +3,22 @@
         
         <ng-template [ngSwitchCase]="'idle'">
             <button mat-raised-button color="primary" class="save-button idle">
-                Save
+                {{ 'sheet.save-button.save' | translate }}
                 <mat-icon aria-hidden="true">save</mat-icon>
             </button>
         </ng-template>
         
         <ng-template [ngSwitchCase]="'saving'">
             <button mat-raised-button color="primary" class="save-button saving" disabled>
-                Saving... <mat-icon aria-hidden="true">loop</mat-icon>
+                {{ 'sheet.save-button.saving' | translate }}
+                <mat-icon aria-hidden="true">loop</mat-icon>
             </button>
         </ng-template>
         
         <ng-template [ngSwitchCase]="'saved'">
             <button mat-raised-button color="primary" class="save-button saved">
-                Saved <mat-icon aria-hidden="true">done</mat-icon>
+                {{ 'sheet.save-button.saved' | translate }}
+                <mat-icon aria-hidden="true">done</mat-icon>
             </button>
         </ng-template>
         

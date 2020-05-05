@@ -9,6 +9,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
+import { FakeTranslateModule } from 'src/app/test-helpers/translate.spec';
 import { GameSectionComponent } from '../game-section/game-section.component';
 import { SheetCardComponent } from '../sheet-card/sheet-card.component';
 import { SheetSelectorPageComponent } from './sheet-selector-page.component';
@@ -20,7 +21,7 @@ describe('SheetSelectorPageComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ SheetSelectorPageComponent, GameSectionComponent, SheetCardComponent ],
-      imports: [ NoopAnimationsModule, RouterTestingModule, MatCardModule, MatChipsModule, MatIconModule, MatListModule, MatTabsModule, MatToolbarModule ],
+      imports: [ FakeTranslateModule, NoopAnimationsModule, RouterTestingModule, MatCardModule, MatChipsModule, MatIconModule, MatListModule, MatTabsModule, MatToolbarModule ],
     })
     .compileComponents();
   }));
