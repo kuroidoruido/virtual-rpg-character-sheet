@@ -12,4 +12,6 @@
 @mixin setup-all-page-ratio() {
     @include setup-page-ratio('A4', 'portrait', 141.43%);
     @include setup-page-ratio('A4', 'landscape', 70.71%);
+    @include setup-page-ratio('A5', 'portrait', 141.43%);
+    @include setup-page-ratio('A5', 'landscape', 70.71%);
 }

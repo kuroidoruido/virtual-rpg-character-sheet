@@ -15,7 +15,7 @@ export interface TwoPageContent {
 
 export type SheetContent = OnePageContent | TwoPageContent;
 
-export type PageFormat = 'A4';
+export type PageFormat = 'A4' | 'A5';
 
 export type PageOrientation = 'portrait' | 'landscape';
 
