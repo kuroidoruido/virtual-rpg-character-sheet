@@ -10,14 +10,35 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: Manage npm modules cache
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
     - name: Use Node.js 12.x
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
 
-    - name: Prepare and deploy
+    - name: Install dependancies
+      run: npm install
+
+    - name: Run tests
+      run: npm run test:ci
+
+    - name: Build
+      run: npm run build
+
+    - name: Upload built output as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: virtual-rpg-character-sheet-master
+        path: dist/virtual-rpg-character-sheet/
+
+    - name: Deploy on Github Pages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        npm install
-        npm run ng -- deploy --base-href=/virtual-rpg-character-sheet/ --name="Anthony Pena" --email="anthony.pena@outlook.fr" --no-silent
+      run: npm run ng -- deploy --base-href=/virtual-rpg-character-sheet/ --name="Anthony Pena" --email="anthony.pena@outlook.fr" --no-silent
