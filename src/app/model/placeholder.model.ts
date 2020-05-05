@@ -40,18 +40,13 @@ export interface NumberComputedPlaceholderConfig extends BasePlaceholderConfig {
     compute: NumberComputeFunction;
 }
 
-type CheckboxStyle = 'cross' | 'tick' | 'square' | 'circle' | 'filled-square' | 'filled-circle';
+export type CheckboxStyle = 'cross' | 'tick' | 'square' | 'circle' | 'filled-square' | 'filled-circle';
 
-export interface CheckboxPlaceholderConfig extends BasePlaceholderConfig {
-    type: 'checkbox';
-    style?: CheckboxStyle;
-}
+export type BaseCheckboxPlaceholderConfig = BasePlaceholderConfig & ({ style?: CheckboxStyle} | { styleToggle?: CheckboxStyle[]});
 
-export interface CheckboxGroupPlaceholderConfig extends BasePlaceholderConfig {
-    type: 'checkbox-group';
-    style?: CheckboxStyle;
-    group: string;
-}
+export type CheckboxPlaceholderConfig = BaseCheckboxPlaceholderConfig & { type: 'checkbox' };
+
+export type CheckboxGroupPlaceholderConfig = BaseCheckboxPlaceholderConfig & { type: 'checkbox-group'; group: string; };
 
 export type PlaceholderConfig = 
     | TextInputPlaceholderConfig 

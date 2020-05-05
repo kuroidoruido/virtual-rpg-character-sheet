@@ -52,7 +52,6 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - can keep more than one character for one particular game for one user
 - a sheet builder assistant (because it's really boring to make it through json...)
 - insert image (character photo), should be save as Base64 to have no external files + resize/compress to be lightweight
-- checkbox (and checkbox group) can toggle between multiple style (for example: none, filled circle, cross)
 - home page with product presentation
 - i18n support (starting with english and french)
 - notes zone: tab key add 2 spaces
