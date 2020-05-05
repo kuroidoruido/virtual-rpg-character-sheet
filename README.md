@@ -31,6 +31,8 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 
 ## Supported games
 
+- Billet Rouge
+    - FR sheet
 - Cats! La Mascarade
     - FR Bastet sheet
     - FR Cat sheet
@@ -46,15 +48,13 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - Save needed indicator (when data are changed and we have not saved yet)
 - import/export feature
 - print mode (convert editable field as static field, make multiple page on column, make it fit in A4 pages)
-- more game sheet:
-    - Billet Rouge
-    - ...
 - can keep more than one character for one particular game for one user
 - a sheet builder assistant (because it's really boring to make it through json...)
 - insert image (character photo), should be save as Base64 to have no external files + resize/compress to be lightweight
 - home page with product presentation
 - i18n support (starting with english and french)
 - notes zone: tab key add 2 spaces
+- surface test on sheet config to helper avoid mistakes
 
 # LICENSE
 

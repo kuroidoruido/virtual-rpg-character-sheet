@@ -2,6 +2,13 @@ import { Game } from './model/game.model';
 
 export const GAMES: Game[] = [
     {
+        gameId: 'billet-rouge',
+        gameName: 'Billet Rouge',
+        sheets: [
+            { sheetId: 'fr', sheetName: 'Billet Rouge FR', moduleName: 'BilletRougeFrModule', imgAsset: 'page-1.png' },
+        ],
+    },
+    {
         gameId: 'cats-la-mascarade',
         gameName: 'Cats! La Mascarade',
         sheets: [

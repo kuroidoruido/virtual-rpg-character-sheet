@@ -3,22 +3,22 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { SheetWrapperModule } from 'src/app/template/sheet-wrapper';
 import { TwoPagesModule } from 'src/app/template/two-pages';
-import { CthulhuV7FrClassiqueComponent } from './cthulhu-v7-fr-classique.component';
+import { FrComponent } from './fr.component';
 
-describe('CthulhuV7FrClassiqueComponent', () => {
-  let component: CthulhuV7FrClassiqueComponent;
-  let fixture: ComponentFixture<CthulhuV7FrClassiqueComponent>;
+describe('FrComponent', () => {
+  let component: FrComponent;
+  let fixture: ComponentFixture<FrComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CthulhuV7FrClassiqueComponent ],
+      declarations: [ FrComponent ],
       imports: [ RouterTestingModule, SheetWrapperModule, TwoPagesModule ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CthulhuV7FrClassiqueComponent);
+    fixture = TestBed.createComponent(FrComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
