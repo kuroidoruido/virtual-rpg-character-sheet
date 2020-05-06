@@ -1,0 +1,50 @@
+{
+    "dice-roller": {
+        "dice": "dé",
+        "dices": "dés",
+        "roll": "Lancer"
+    },
+    "raw-editor": {
+        "filter-input": {
+            "hint": "Entrez une partie de la clé que vous cherchez",
+            "label": "Filtrer sur les clés"
+        },
+        "save-button": {
+            "save": "Sauvegarder",
+            "saved": "Sauvegardé",
+            "saving": "Sauvegarde..."
+        },
+        "table": {
+            "heading": {
+                "delete": "Supprimer",
+                "key": "Clé",
+                "value": "Valeur"
+            },
+            "no-data": "Aucune donnée à afficher."
+        }
+    },
+    "sheet-config-panel": {
+        "raw-editor-button": "Ouvrir l'éditeur avancé",
+        "share-link": {
+            "button": "Obtenir le lien de partage",
+            "hint": "Ce lien va donner accès à une copie de la fiche de personnage courante.",
+            "label": "Lien de partage"
+        }
+    },
+    "sheet-selector": {
+        "sheet-card": {
+            "create": "Nouveau personnage"
+        },
+        "tabs": {
+            "all": "Toutes les fiches",
+            "my-sheets": "Mes fiches"
+        }
+    },
+    "sheet": {
+        "save-button": {
+            "save": "Sauvegarder",
+            "saved": "Sauvegardé",
+            "saving": "Sauvegarde..."
+        }
+    }
+}
