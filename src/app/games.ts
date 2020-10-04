@@ -20,7 +20,7 @@ export const GAMES: Game[] = [
     },
     {
         gameId: 'cthulhu-v7',
-        gameName: 'Cthulhu V7',
+        gameName: 'Cthulhu V7 (Sans Détours)',
         sheets: [
             { sheetId: 'fr-classique', sheetName: 'FR Classique', moduleName: 'CthulhuV7FrClassiqueModule', imgAsset: 'page-1.png' },
         ],
