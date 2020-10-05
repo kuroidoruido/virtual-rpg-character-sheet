@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1600893037880,
+  "timestamp": 1601877110412,
   "index": "/virtual-rpg-character-sheet/index.html",
   "assetGroups": [
     {
@@ -38,8 +38,8 @@
         "/virtual-rpg-character-sheet/common-es5.2e6b64939523268bbdc6.js",
         "/virtual-rpg-character-sheet/favicon.ico",
         "/virtual-rpg-character-sheet/index.html",
-        "/virtual-rpg-character-sheet/main-es2015.934d73b08822f27ae18a.js",
-        "/virtual-rpg-character-sheet/main-es5.934d73b08822f27ae18a.js",
+        "/virtual-rpg-character-sheet/main-es2015.6d04dfe007e6ba7c82cb.js",
+        "/virtual-rpg-character-sheet/main-es5.6d04dfe007e6ba7c82cb.js",
         "/virtual-rpg-character-sheet/manifest.webmanifest",
         "/virtual-rpg-character-sheet/polyfills-es2015.3f032837aab2ed2c2f3f.js",
         "/virtual-rpg-character-sheet/polyfills-es5.3b20bd2ba591673e81fc.js",
@@ -135,9 +135,9 @@
     "/virtual-rpg-character-sheet/common-es2015.2e6b64939523268bbdc6.js": "25c315e567cf1b4652d90e26cf397196a27b9a0b",
     "/virtual-rpg-character-sheet/common-es5.2e6b64939523268bbdc6.js": "af73fc2bf3ed016ead58bca8a566584f80a788e8",
     "/virtual-rpg-character-sheet/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/virtual-rpg-character-sheet/index.html": "92fa5332f8c241a15e3daff874051e3ba47bbe2b",
-    "/virtual-rpg-character-sheet/main-es2015.934d73b08822f27ae18a.js": "dd3e456cdd0f96ea5bf7c60b6849b49130499898",
-    "/virtual-rpg-character-sheet/main-es5.934d73b08822f27ae18a.js": "13313322ce1d985c046523af4b80cd4245036939",
+    "/virtual-rpg-character-sheet/index.html": "338ccde57ecd104e5a27b39662e6913d40194d24",
+    "/virtual-rpg-character-sheet/main-es2015.6d04dfe007e6ba7c82cb.js": "6116a7a60926a567fc522e30ed49437d341828f7",
+    "/virtual-rpg-character-sheet/main-es5.6d04dfe007e6ba7c82cb.js": "2b675211ec032a5cd69aaac3091372d1b225374d",
     "/virtual-rpg-character-sheet/manifest.webmanifest": "f166e2778ce292202ecbc77146ab8c0714eb46be",
     "/virtual-rpg-character-sheet/polyfills-es2015.3f032837aab2ed2c2f3f.js": "8ce9590c13a0b5efe0299dd27697c44198926d58",
     "/virtual-rpg-character-sheet/polyfills-es5.3b20bd2ba591673e81fc.js": "915dce1fdc4f96e652d5623af865035d089e95d5",
