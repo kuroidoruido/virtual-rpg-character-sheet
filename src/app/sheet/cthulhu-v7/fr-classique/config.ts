@@ -1,14 +1,15 @@
+// tslint:disable: max-line-length
 import { produce } from 'immer';
 
 import { CharacterData } from 'src/app/model/character-data.model';
 import { NumberComputedPlaceholderConfig } from 'src/app/model/placeholder.model';
 import { TwoPageSheetConfig } from 'src/app/model/sheet-config.model';
 
-function difficulte(config: Omit<NumberComputedPlaceholderConfig, 'compute'>, suffix: string, divider: number, baseValueKey?: string): NumberComputedPlaceholderConfig {
-  const key = baseValueKey || config.key.replace(suffix, '');
-  return produce(config as NumberComputedPlaceholderConfig, draft => {
+function difficulte(sheetConfig: Omit<NumberComputedPlaceholderConfig, 'compute'>, suffix: string, divider: number, baseValueKey?: string): NumberComputedPlaceholderConfig {
+  const key = baseValueKey || sheetConfig.key.replace(suffix, '');
+  return produce(sheetConfig as NumberComputedPlaceholderConfig, draft => {
     draft.compute = (data: CharacterData) => {
-      const baseValue = parseInt(data.values[key] as any);
+      const baseValue = parseInt(data.values[key] as any, 10);
       if (baseValue === undefined || isNaN(baseValue)) {
         return '';
       }
@@ -17,13 +18,14 @@ function difficulte(config: Omit<NumberComputedPlaceholderConfig, 'compute'>, su
   });
 }
 
-function demi(config: Omit<NumberComputedPlaceholderConfig, 'compute'>, baseValueKey?: string): NumberComputedPlaceholderConfig {
-  return difficulte(config, '_2', 2, baseValueKey);
+function demi(sheetConfig: Omit<NumberComputedPlaceholderConfig, 'compute'>, baseValueKey?: string): NumberComputedPlaceholderConfig {
+  return difficulte(sheetConfig, '_2', 2, baseValueKey);
 }
 
-function cinquieme(config: Omit<NumberComputedPlaceholderConfig, 'compute'>, baseValueKey?: string): NumberComputedPlaceholderConfig {
-  return difficulte(config, '_5', 5, baseValueKey);
+function cinquieme(sheetConfig: Omit<NumberComputedPlaceholderConfig, 'compute'>, baseValueKey?: string): NumberComputedPlaceholderConfig {
+  return difficulte(sheetConfig, '_5', 5, baseValueKey);
 }
+
 
 export const config: TwoPageSheetConfig = {
   gameId: 'cthulhu-v7',
