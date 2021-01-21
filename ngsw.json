@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1605979580916,
+  "timestamp": 1611214217264,
   "index": "/virtual-rpg-character-sheet/index.html",
   "assetGroups": [
     {
@@ -34,8 +34,8 @@
         "/virtual-rpg-character-sheet/3-es5.eab45cd482b962ca3cb0.js",
         "/virtual-rpg-character-sheet/4-es2015.fc41ff1135ca953c1417.js",
         "/virtual-rpg-character-sheet/4-es5.fc41ff1135ca953c1417.js",
-        "/virtual-rpg-character-sheet/common-es2015.2e6b64939523268bbdc6.js",
-        "/virtual-rpg-character-sheet/common-es5.2e6b64939523268bbdc6.js",
+        "/virtual-rpg-character-sheet/common-es2015.d727d80c6cc43e6426b0.js",
+        "/virtual-rpg-character-sheet/common-es5.d727d80c6cc43e6426b0.js",
         "/virtual-rpg-character-sheet/favicon.ico",
         "/virtual-rpg-character-sheet/index.html",
         "/virtual-rpg-character-sheet/main-es2015.128cb228081713f35d4f.js",
@@ -43,8 +43,8 @@
         "/virtual-rpg-character-sheet/manifest.webmanifest",
         "/virtual-rpg-character-sheet/polyfills-es2015.3f032837aab2ed2c2f3f.js",
         "/virtual-rpg-character-sheet/polyfills-es5.3b20bd2ba591673e81fc.js",
-        "/virtual-rpg-character-sheet/runtime-es2015.b41bf3fbfcaa0d5d387a.js",
-        "/virtual-rpg-character-sheet/runtime-es5.b41bf3fbfcaa0d5d387a.js",
+        "/virtual-rpg-character-sheet/runtime-es2015.9755bf7f6c6976940715.js",
+        "/virtual-rpg-character-sheet/runtime-es5.9755bf7f6c6976940715.js",
         "/virtual-rpg-character-sheet/styles.f1bad432bd5a3387537c.css"
       ],
       "patterns": []
@@ -132,17 +132,17 @@
     "/virtual-rpg-character-sheet/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "/virtual-rpg-character-sheet/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/virtual-rpg-character-sheet/assets/nains-et-jardins/fr/page-1.png": "8e35aa1bcda03e862f81c352ba420505e54897f7",
-    "/virtual-rpg-character-sheet/common-es2015.2e6b64939523268bbdc6.js": "25c315e567cf1b4652d90e26cf397196a27b9a0b",
-    "/virtual-rpg-character-sheet/common-es5.2e6b64939523268bbdc6.js": "af73fc2bf3ed016ead58bca8a566584f80a788e8",
+    "/virtual-rpg-character-sheet/common-es2015.d727d80c6cc43e6426b0.js": "e5d726d9fc5d861ddad4c8105e9a4ec0c4f71f0c",
+    "/virtual-rpg-character-sheet/common-es5.d727d80c6cc43e6426b0.js": "e668cb1c61a6317802438d37b69045fd940dd0ba",
     "/virtual-rpg-character-sheet/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/virtual-rpg-character-sheet/index.html": "f115444f2fadc8e71b304eb4e9321435d30f5134",
+    "/virtual-rpg-character-sheet/index.html": "26b655b8113a19cad0bbb6f8a81fbc523620678a",
     "/virtual-rpg-character-sheet/main-es2015.128cb228081713f35d4f.js": "09a2f03f71b37b2513496975ccfb52edda22126b",
     "/virtual-rpg-character-sheet/main-es5.128cb228081713f35d4f.js": "bd6ce45f9ef2dd08de757c001f07b494933acbaa",
     "/virtual-rpg-character-sheet/manifest.webmanifest": "f166e2778ce292202ecbc77146ab8c0714eb46be",
     "/virtual-rpg-character-sheet/polyfills-es2015.3f032837aab2ed2c2f3f.js": "8ce9590c13a0b5efe0299dd27697c44198926d58",
     "/virtual-rpg-character-sheet/polyfills-es5.3b20bd2ba591673e81fc.js": "915dce1fdc4f96e652d5623af865035d089e95d5",
-    "/virtual-rpg-character-sheet/runtime-es2015.b41bf3fbfcaa0d5d387a.js": "46367e36105631374e812f36612893065dd4649d",
-    "/virtual-rpg-character-sheet/runtime-es5.b41bf3fbfcaa0d5d387a.js": "16eda5dd0c8dd82daf458837d1fadb6fd8644f45",
+    "/virtual-rpg-character-sheet/runtime-es2015.9755bf7f6c6976940715.js": "eeb74a230310bcc68d3d04c3426e691a24d2111c",
+    "/virtual-rpg-character-sheet/runtime-es5.9755bf7f6c6976940715.js": "ef7e9a16b363f93227e47ddbbfcce9a8599c8f28",
     "/virtual-rpg-character-sheet/styles.f1bad432bd5a3387537c.css": "0fa72ecc41cd8599e93195e7d516cf24826a4d51"
   },
   "navigationUrls": [
