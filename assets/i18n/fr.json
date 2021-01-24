@@ -24,6 +24,7 @@
         }
     },
     "sheet-config-panel": {
+        "export-pdf-button": "Exporter en PDF",
         "raw-editor-button": "Ouvrir l'éditeur avancé",
         "share-link": {
             "button": "Obtenir le lien de partage",
