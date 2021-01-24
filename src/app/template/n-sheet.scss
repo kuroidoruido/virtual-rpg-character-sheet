@@ -15,3 +15,14 @@
     @include setup-page-ratio('A5', 'portrait', 141.43%);
     @include setup-page-ratio('A5', 'landscape', 70.71%);
 }
+
+@mixin handle-mode() {
+    &:not(.mode-NORMAL) {
+        ::ng-deep {
+            * {
+                border: none;
+                background: none;
+            }
+        }
+    }
+}

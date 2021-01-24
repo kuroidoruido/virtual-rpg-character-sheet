@@ -11,6 +11,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { SheetConfigPanelComponent } from './sheet-config-panel/sheet-config-panel.component';
 import { SheetConfigToggleButtonComponent } from './sheet-config-toggle-button/sheet-config-toggle-button.component';
+import { Page2pdfModule } from '../shared/page2pdf/page2pdf.module';
 
 @NgModule({
   declarations: [SheetConfigPanelComponent, SheetConfigToggleButtonComponent],
@@ -24,6 +25,8 @@ import { SheetConfigToggleButtonComponent } from './sheet-config-toggle-button/s
     MatIconModule,
     MatInputModule,
     MatSnackBarModule,
+
+    Page2pdfModule,
   ],
   exports: [SheetConfigPanelComponent, SheetConfigToggleButtonComponent],
 })

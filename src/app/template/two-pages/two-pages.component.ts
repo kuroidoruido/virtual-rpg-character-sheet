@@ -13,6 +13,8 @@ export class TwoPagesComponent implements OnInit {
 
   @Input() sheetConfig!: TwoPageSheetConfig;
   @Input() characterData: CharacterData = { values: { characterName: '' } };
+  
+  modeClass$ = this.pageConfigService.getClassMode();
 
   constructor(public pageConfigService: PageConfigService) {}
 

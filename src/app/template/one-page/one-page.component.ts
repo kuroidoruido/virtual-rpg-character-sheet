@@ -13,6 +13,8 @@ export class OnePageComponent implements OnInit {
 
   @Input() sheetConfig!: OnePageSheetConfig;
   @Input() characterData: CharacterData = { values: { characterName: '' } };
+  
+  modeClass$ = this.pageConfigService.getClassMode();
 
   constructor(public pageConfigService: PageConfigService) {}
 

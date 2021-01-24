@@ -1,10 +1,13 @@
 import { Component, ViewChild } from '@angular/core';
-
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { timer } from 'rxjs';
+import { first, mergeMap } from 'rxjs/operators';
+import { Page2PdfService, PdfConfig } from 'src/app/shared/page2pdf/page2pdf.service';
 
-import { SheetConfigStateService } from '../sheet-config-state.service';
 import { ShareLinkService } from 'src/app/shared/share-link/share-link.service';
 import { SheetStateService } from 'src/app/shared/sheet-state/sheet-state.service';
+import { PageConfigService } from 'src/app/template/page-config-service/page-config.service';
+import { SheetConfigStateService } from '../sheet-config-state.service';
 
 @Component({
   selector: 'app-sheet-config-panel',
@@ -20,9 +23,11 @@ export class SheetConfigPanelComponent {
 
   constructor(
     public sheetConfigPanelService: SheetConfigStateService, 
-    public sheetStateService: SheetStateService, 
+    public sheetStateService: SheetStateService,
+    private pageConfigService: PageConfigService,
     private shareLinkService: ShareLinkService, 
-    private snackBar: MatSnackBar) { }
+    private snackBar: MatSnackBar,
+    private page2pdf: Page2PdfService) { }
 
   toggleShowShareLink() {
     this.showShareLink = !this.showShareLink;
@@ -41,6 +46,20 @@ export class SheetConfigPanelComponent {
         this.snackBar.open('Share link copied in clipboard', undefined, { duration: 2000 });
       }
     }
+  }
+
+  exportPdf() {
+    this.pageConfigService.enablePrintMode();
+    const pdfConfig: PdfConfig = {
+      characterName: this.sheetStateService.currentCharacterData.values.characterName,
+      format: this.sheetStateService.currentSheetConfig.pageConfig.pageFormat,
+      orientation: this.sheetStateService.currentSheetConfig.pageConfig.pageOrientation,
+      pageCount: this.sheetStateService.currentSheetConfig.content.pageCount,
+    };
+    timer(100).pipe(
+      mergeMap(() => this.page2pdf.exportPdf('.page', pdfConfig)),
+      first(),
+    ).subscribe(() => this.pageConfigService.disablePrintMode());
   }
 
 }

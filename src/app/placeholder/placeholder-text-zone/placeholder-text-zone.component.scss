@@ -1,9 +1,14 @@
 :host {
-    textarea {
+    textarea, .textarea-print-mode-replacement {
         display: block;
         position: absolute;
         background: rgba(255,255,255,0.6) repeat;
         border: dotted thin blueviolet;
         resize: none;
+    }
+    .textarea-print-mode-replacement {
+        // mimic textare style
+        font-size: 12px;
+        line-height: normal;
     }
 }

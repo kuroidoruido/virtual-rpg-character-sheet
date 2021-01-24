@@ -1,7 +1,18 @@
-<textarea 
-    [ngStyle]="config | placeholderStyle"
-    [style.height]="config.height+'%'"
-    [name]="config.key"
-    [(ngModel)]="characterData.values[config.key]"
-    wrap="hard">
-</textarea>
+<ng-template [ngIf]="(mode$ | async) === 'PRINT'" [ngIfElse]="normalMode">
+    <!-- dirty fix until this PR will be merged: https://github.com/niklasvh/html2canvas/pull/2132 -->
+    <pre
+        class="textarea-print-mode-replacement"
+        [ngStyle]="config | placeholderStyle"
+        [style.height]="config.height+'%'"
+        contenteditable="true">{{ characterData.values[config.key] }}
+    </pre>
+</ng-template>
+<ng-template #normalMode>
+    <textarea 
+        [ngStyle]="config | placeholderStyle"
+        [style.height]="config.height+'%'"
+        [name]="config.key"
+        [(ngModel)]="characterData.values[config.key]"
+        wrap="hard">
+    </textarea>
+</ng-template>

@@ -1,5 +1,6 @@
 <ng-template [ngIf]="sheetConfigPanelService.panelIsOpened$ | async">
     <div class="wrapper">
+        <button mat-stroked-button (click)="exportPdf()">{{ 'sheet-config-panel.export-pdf-button' | translate }}</button>
         <button mat-stroked-button (click)="toggleShowShareLink()">{{ 'sheet-config-panel.share-link.button' | translate }}</button>
         <ng-template [ngIf]="showShareLink">
             <form>

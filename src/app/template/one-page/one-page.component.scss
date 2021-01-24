@@ -6,8 +6,9 @@
     height: 100%;
     
     @include setup-all-page-ratio();
-
+    
     .pages {
+        @include handle-mode();
         display: flex;
         flex-direction: row;
         width: 100%;
