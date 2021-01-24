@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PlaceholderStylePipe } from '../placeholder-style/placeholder-style.pipe';
 import { PlaceholderCheckboxGroupComponent } from './placeholder-checkbox-group.component';
@@ -7,7 +7,7 @@ describe('PlaceholderCheckboxGroupComponent', () => {
   let component: PlaceholderCheckboxGroupComponent;
   let fixture: ComponentFixture<PlaceholderCheckboxGroupComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PlaceholderCheckboxGroupComponent, PlaceholderStylePipe ]
     })

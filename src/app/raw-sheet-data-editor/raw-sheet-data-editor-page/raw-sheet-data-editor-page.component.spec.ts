@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
@@ -12,7 +12,7 @@ describe('RawSheetDataEditorPageComponent', () => {
   let component: RawSheetDataEditorPageComponent;
   let fixture: ComponentFixture<RawSheetDataEditorPageComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ RawSheetDataEditorPageComponent ],
       imports: [ FakeTranslateModule, RouterTestingModule, MatButtonModule, MatIconModule, MatInputModule, MatTableModule ]

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 
@@ -18,7 +18,7 @@ describe('SheetSelectorPageComponent', () => {
   let component: SheetSelectorPageComponent;
   let fixture: ComponentFixture<SheetSelectorPageComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ SheetSelectorPageComponent, GameSectionComponent, SheetCardComponent ],
       imports: [ FakeTranslateModule, NoopAnimationsModule, RouterTestingModule, MatCardModule, MatChipsModule, MatIconModule, MatListModule, MatTabsModule, MatToolbarModule ],

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { OnePageComponent } from './one-page.component';
 import { PlaceholderModule } from 'src/app/placeholder/placeholder.module';
@@ -7,7 +7,7 @@ describe('OnePageComponent', () => {
   let component: OnePageComponent;
   let fixture: ComponentFixture<OnePageComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ OnePageComponent ],
       imports: [ PlaceholderModule ]

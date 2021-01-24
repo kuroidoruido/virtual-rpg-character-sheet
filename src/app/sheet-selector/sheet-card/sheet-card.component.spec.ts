@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
@@ -10,7 +10,7 @@ describe('SheetCardComponent', () => {
   let component: SheetCardComponent;
   let fixture: ComponentFixture<SheetCardComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ SheetCardComponent ],
       imports: [ FakeTranslateModule, RouterTestingModule, MatCardModule, MatChipsModule ],

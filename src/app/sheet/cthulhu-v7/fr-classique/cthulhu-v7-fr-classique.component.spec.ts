@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { SheetWrapperModule } from 'src/app/template/sheet-wrapper';
@@ -10,7 +10,7 @@ describe('CthulhuV7FrClassiqueComponent', () => {
   let component: CthulhuV7FrClassiqueComponent;
   let fixture: ComponentFixture<CthulhuV7FrClassiqueComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ CthulhuV7FrClassiqueComponent ],
       imports: [ FakeTranslateModule, RouterTestingModule, SheetWrapperModule, TwoPagesModule ]

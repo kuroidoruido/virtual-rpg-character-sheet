@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -10,7 +10,7 @@ describe('SheetConfigPanelComponent', () => {
   let component: SheetConfigPanelComponent;
   let fixture: ComponentFixture<SheetConfigPanelComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ SheetConfigPanelComponent ],
       imports: [ MatIconModule, MatSnackBarModule, Page2pdfModule ]

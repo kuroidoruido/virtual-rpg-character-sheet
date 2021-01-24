@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DiceRollerButtonComponent } from './dice-roller-button.component';
 
@@ -6,7 +6,7 @@ describe('DiceRollerButtonComponent', () => {
   let component: DiceRollerButtonComponent;
   let fixture: ComponentFixture<DiceRollerButtonComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ DiceRollerButtonComponent ]
     })

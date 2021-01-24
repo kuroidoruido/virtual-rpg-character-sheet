@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -11,7 +11,7 @@ describe('DiceRollerComponent', () => {
   let component: DiceRollerComponent;
   let fixture: ComponentFixture<DiceRollerComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ DiceRollerComponent ],
       imports: [ FakeTranslateModule, NoopAnimationsModule, MatButtonModule, MatFormFieldModule, MatInputModule ],

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -9,7 +9,7 @@ describe('RawEditorSaveButtonComponent', () => {
   let component: RawEditorSaveButtonComponent;
   let fixture: ComponentFixture<RawEditorSaveButtonComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ RawEditorSaveButtonComponent ],
       imports: [ FakeTranslateModule, MatButtonModule, MatIconModule ],
