@@ -1,21 +1,21 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 
 // "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-@include mat-core();
+@include mat.core();
 
-$custom-primary: mat-palette($mat-deep-purple);
-$custom-accent: mat-palette($mat-pink);
-$custom-warn: mat-palette($mat-amber);
-$custom-background: mat-palette($mat-gray);
+$custom-primary: mat.define-palette(mat.$deep-purple-palette);
+$custom-accent: mat.define-palette(mat.$pink-palette);
+$custom-warn: mat.define-palette(mat.$amber-palette);
+$custom-background: mat.define-palette(mat.$gray-palette);
 
-$custom-theme: mat-light-theme($custom-primary, $custom-accent, $custom-warn);
+$custom-theme: mat.define-light-theme($custom-primary, $custom-accent, $custom-warn);
 
-@include angular-material-theme($custom-theme);
+@include mat.all-component-themes($custom-theme);
 
-$color-primary: mat-color($custom-primary);
-$color-accent: mat-color($custom-accent);
-$color-warn: mat-color($custom-warn);
-$color-background: mat-color($custom-background, 300);
+$color-primary: mat.get-color-from-palette($custom-primary);
+$color-accent: mat.get-color-from-palette($custom-accent);
+$color-warn: mat.get-color-from-palette($custom-warn);
+$color-background: mat.get-color-from-palette($custom-background, 300);
 $color-floating-button-background: rgba(255,255,255,0.5);
 
 :root {
