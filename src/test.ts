@@ -2,6 +2,7 @@
 
 import 'zone.js/dist/zone-testing';
 import { getTestBed } from '@angular/core/testing';
+import { ɵDomSharedStylesHost } from '@angular/platform-browser';
 import {
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting
@@ -23,3 +24,8 @@ getTestBed().initTestEnvironment(
 const context = require.context('./', true, /\.spec\.ts$/);
 // And load the modules.
 context.keys().map(context);
+
+// https://github.com/angular/angular/issues/31834
+afterEach(() => {
+  getTestBed().inject(ɵDomSharedStylesHost).ngOnDestroy();
+});
