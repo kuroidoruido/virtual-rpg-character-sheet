@@ -54,6 +54,12 @@ Disclaimer: THIS IS A WORKING IN PROGRESS PROJECT SO IT'S NOT A PERFECT TOOL! Yo
 - home page with product presentation
 - replace local storage by IndexedDB
 
+# Getting started with development
+
+- Run `npm install`
+- Run `npm start`
+- Open `https://localhost:4200` in your browser
+
 # LICENSE
 
 All this project is under GNU General Public Licence 3.0 (see [LICENSE](https://github.com/kuroidoruido/virtual-rpg-character-sheet/blob/master/LICENSE) file) except character sheets that are under them authors copyright.
