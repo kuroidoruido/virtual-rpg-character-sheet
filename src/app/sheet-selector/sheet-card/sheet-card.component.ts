@@ -1,3 +1,4 @@
+import { formatDate } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -22,5 +23,16 @@ export class SheetCardComponent {
 
   createCharacterSheet() {
     this.router.navigate([this.game.gameId + '.' + this.sheet.sheetId]);
+  }
+
+  downloadVrpgJson() {
+    const fileData = JSON.stringify(this.sheet.characters);
+    const blob = new Blob([fileData], {type: 'application/json'});
+    const url = URL.createObjectURL(blob);
+    const aElement = document.createElement('a');
+    aElement.href = url;
+    const date = formatDate(new Date(), 'y-MM-dd', 'en');
+    aElement.download = `${date}-${this.sheet.sheetName}.vrpg.json`;
+    aElement.click();
   }
 }

@@ -30,6 +30,9 @@ mat-card {
             mat-chip {
                 cursor: pointer;
             }
+            mat-chip.download {
+                margin-left: 16px;
+            }
         }
     }
 }
