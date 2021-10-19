@@ -25,7 +25,7 @@
     },
     "sheet-config-panel": {
         "export-pdf-button": "Export to PDF",
-        "raw-editor-button": "Open advance editor",
+        "raw-editor-button": "Open advanced editor",
         "share-link": {
             "button": "Get share link",
             "hint": "This link will give a copy of your current character sheet.",
