@@ -13,6 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { SheetSelectorPageComponent } from './sheet-selector-page/sheet-selector-page.component';
 import { SheetCardComponent } from './sheet-card/sheet-card.component';
 import { GameSectionComponent } from './game-section/game-section.component';
+import { MatIconModule } from '@angular/material/icon';
 
 const routes: Routes = [{ path: '', component: SheetSelectorPageComponent }];
 
@@ -26,6 +27,7 @@ const routes: Routes = [{ path: '', component: SheetSelectorPageComponent }];
     MatCardModule,
     MatChipsModule,
     MatDividerModule,
+    MatIconModule,
     MatListModule,
     MatTabsModule,
     MatToolbarModule,

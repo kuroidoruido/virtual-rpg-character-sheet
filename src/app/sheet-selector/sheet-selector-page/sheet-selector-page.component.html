@@ -10,7 +10,7 @@
             <ng-template ngFor let-game [ngForOf]="ownGamesSheet" let-isLast="last">
                 <app-game-section mat-list-item [game]="game"></app-game-section>
                 <mat-divider *ngIf="!isLast" ></mat-divider>
-            </ng-template>    
+            </ng-template>
         </mat-action-list>
     </mat-tab>
     <mat-tab>
@@ -22,7 +22,7 @@
             <ng-template ngFor let-game [ngForOf]="games" let-isLast="last">
                 <app-game-section mat-list-item [game]="game"></app-game-section>
                 <mat-divider *ngIf="!isLast" ></mat-divider>
-            </ng-template>    
+            </ng-template>
         </mat-action-list>
     </mat-tab>
 </mat-tab-group>
