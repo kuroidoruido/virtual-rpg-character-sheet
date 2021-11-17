@@ -1,21 +1,18 @@
 <form class="dice-roller">
     <mat-form-field class="dice-count">
-        <input matInput [value]="diceCount" (keyup)="diceCount=$event.target.value"/>
+        <input #diceCountInput matInput [value]="diceCount" (keyup)="setDiceCount(diceCountInput.value)" />
     </mat-form-field>
 
     <ng-template [ngIf]="diceCount <= 1" [ngIfElse]="plural">{{ 'dice-roller.dice' | translate }}</ng-template>
     <ng-template #plural>{{ 'dice-roller.dices' | translate }}</ng-template>
 
     <mat-form-field class="face-count">
-        <input matInput [value]="faceCount" (keyup)="faceCount=$event.target.value"/>
+        <input #faceCountInput matInput [value]="faceCount" (keyup)="setFaceCount(faceCountInput.value)" />
     </mat-form-field>
 
     <button mat-button (click)="roll($event)">{{ 'dice-roller.roll' | translate }}</button>
-    
+
     <div class="result" *ngIf="rolled">
         {{result}} {{ dices | json }}
     </div>
 </form>
-
-  
-  

@@ -4,15 +4,15 @@ import { SaveService } from 'src/app/shared/save/save.service';
 @Component({
   selector: 'app-dice-roller',
   templateUrl: './dice-roller.component.html',
-  styleUrls: ['./dice-roller.component.scss']
+  styleUrls: ['./dice-roller.component.scss'],
 })
 export class DiceRollerComponent {
-  diceCount: number = 1;
-  faceCount: number = 6;
+  diceCount = 1;
+  faceCount = 6;
   rolled = false;
 
   dices: number[] = [];
-  result: number = 0;
+  result = 0;
 
   constructor(private save: SaveService) {
     const diceRollerState = save.restoreDiceRoller();
@@ -21,12 +21,17 @@ export class DiceRollerComponent {
       this.faceCount = diceRollerState[1];
     }
   }
-
+  setDiceCount(value: string): void {
+    this.diceCount = parseInt(value, 10);
+  }
+  setFaceCount(value: string): void {
+    this.faceCount = parseInt(value, 10);
+  }
   roll(event: any) {
     event.preventDefault();
     let result = 0;
     const dices = [];
-    for(let i = 0; i < this.diceCount; i++) {
+    for (let i = 0; i < this.diceCount; i++) {
       const dice = Math.ceil(Math.random() * this.faceCount);
       dices.push(dice);
       result += dice;
